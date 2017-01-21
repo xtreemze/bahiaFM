@@ -38,7 +38,7 @@ body {
 	background-image : url("img/logo.jpg");
 	height           : 40vh;
 	max-width        : 848px;
-	min-width        : 411px;
+	min-width        : 356px;
 	margin           : 20vh auto 0;
 	position         : inherit;
 	background-size  : contain;
