@@ -1,7 +1,6 @@
 body {
 	margin          : 0;
 	background-color: #fdc526;
-	height          : 100%;
 }
 
 .audio {
@@ -37,9 +36,9 @@ body {
 .logo {
 	background-image : url("img/logo.jpg");
 	height           : 40vh;
-	max-width        : 848px;
-	min-width        : 356px;
-	margin           : 20vh auto 0;
+	max-width        : 768px;
+	min-width        : 326px;
+	margin           : 38vh auto 0;
 	position         : inherit;
 	background-size  : contain;
 	z-index          : 1;
