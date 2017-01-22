@@ -9,6 +9,7 @@ body {
 	position  : absolute;
 	bottom    : 0;
 	z-index   : 15;
+	display   : none;
 }
 
 .birds {
@@ -28,7 +29,7 @@ body {
 	background-image : url("img/muelle.jpg");
 	height           : 16vw;
 	width            : 100vw;
-	bottom           : 32px;
+	bottom           : 0;
 	position         : absolute;
 	background-size  : cover;
 	background-repeat: no-repeat;
@@ -49,7 +50,6 @@ body {
 
 .paused {
 	background-image: url("img/pause.svg");
-
 }
 
 #button1 {

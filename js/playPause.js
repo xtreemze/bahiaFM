@@ -1,9 +1,10 @@
 checkPause = function checkPause() {
   if (audioE.paused) {
     audioE.play();
-    button1.className = ('button paused');
+    button1.className = ('paused');
   } else {
     audioE.pause();
-    button1.className = ('button playing');
+    button1.className = ('playing');
   }
 };
+checkPause();
