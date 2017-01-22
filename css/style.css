@@ -36,9 +36,9 @@ body {
 }
 
 .logo {
-	width    : 84vw;
-	max-width: 110vh;
-	margin   : 18vh 8vw 12vh;
+	width    : 72vw;
+	max-width: 90vh;
+	margin   : 26vh 14vw 12vh;
 	position : relative;
 	z-index  : 11;
 }
