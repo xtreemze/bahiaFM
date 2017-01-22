@@ -3,6 +3,10 @@ body {
 	background-color: #FFCB05;
 }
 
+::selection {
+	background: #FFCB05;
+}
+
 #audioE {
 	width     : 100%;
 	min-height: 32px;
