@@ -26,7 +26,7 @@ body {
 
 .muelle {
 	background-image : url("img/muelle.svg");
-	height           : 16vw;
+	height           : 28vh;
 	width            : 100vw;
 	bottom           : 0;
 	position         : absolute;
@@ -38,7 +38,7 @@ body {
 .logo {
 	width    : 72vw;
 	max-width: 90vh;
-	margin   : 26vh 14vw 12vh;
+	margin   : 24vh 14vw 0;
 	position : relative;
 	z-index  : 11;
 }
@@ -52,12 +52,11 @@ body {
 }
 
 #button1 {
-	height           : 32vh;
+	height           : 26vh;
 	min-width        : 48px;
 	margin           : 0 auto;
-	width            : 32vh;
+	width            : 26vh;
 	position         : relative;
-	top              : -13vh;
 	background-size  : cover;
 	z-index          : 15;
 	background-repeat: no-repeat;
