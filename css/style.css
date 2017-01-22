@@ -3,16 +3,17 @@ body {
 	background-color: #fdc526;
 }
 
-.audio {
+#audioE {
 	width     : 100%;
 	min-height: 32px;
 	position  : absolute;
-	top       : 0;
+	bottom    : 0;
+	z-index   : 15;
 }
 
 .birds {
 	background-image : url("img/birds.jpg");
-	top              : 46px;
+	top              : 28px;
 	right            : 0;
 	height           : 23vh;
 	width            : 16vw;
@@ -27,20 +28,39 @@ body {
 	background-image : url("img/muelle.jpg");
 	height           : 16vw;
 	width            : 100vw;
-	bottom           : 0;
+	bottom           : 32px;
 	position         : absolute;
 	background-size  : cover;
 	background-repeat: no-repeat;
+	z-index          : 10;
 }
 
 .logo {
-	background-image : url("img/logo.jpg");
-	height           : 40vh;
-	max-width        : 768px;
-	min-width        : 326px;
-	margin           : 38vh auto 0;
-	position         : inherit;
-	background-size  : contain;
-	z-index          : 1;
+	width    : 84vw;
+	max-width: 110vh;
+	margin   : 18vh 8vw 12vh;
+	position : relative;
+	z-index  : 11;
+}
+
+.playing {
+	background-image: url("img/play.svg");
+}
+
+.paused {
+	background-image: url("img/pause.svg");
+
+}
+
+#button1 {
+	height           : 32vh;
+	min-width        : 48px;
+	margin           : 0 auto;
+	width            : 32vh;
+	position         : relative;
+	top              : -13vh;
+	background-size  : cover;
+	z-index          : 15;
 	background-repeat: no-repeat;
+	cursor           : pointer;
 }

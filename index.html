@@ -12,15 +12,21 @@
 
 	<body>
 		<div class="birds"></div>
-		<audio class="audio"
-						controls="true"
-						autoplay="true"
+		<audio id="audioE"
+						controls="false"
+						autoplay="false"
 						name="media">
 			<source src="http://192.30.164.78:8000/bahia"
 							type="audio/mpeg">
 				</audio>
-				<div class="logo"></div>
-				<div class="muelle"></div>
+				<img class="logo"
+								src="css/img/logo.jpg"
+								alt="BahiaFM">
+					<div id="button1"
+									class="paused"
+									onclick="checkPause();"></div>
+						<div class="muelle"></div>
+						<script src="js/playPause.min.js"></script>
 	</body>
 
 </html>
