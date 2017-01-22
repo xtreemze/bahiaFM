@@ -13,20 +13,19 @@ body {
 }
 
 .birds {
-	background-image : url("img/birds.jpg");
+	background-image : url("img/birds.svg");
 	top              : 28px;
-	right            : 0;
-	height           : 23vh;
-	width            : 16vw;
+	right            : 36px;
+	height           : 12vh;
 	position         : absolute;
 	background-size  : contain;
 	background-repeat: no-repeat;
-	min-width        : 122px;
-	max-width        : 194px;
+	min-width        : 84px;
+	width            : 10vw;
 }
 
 .muelle {
-	background-image : url("img/muelle.jpg");
+	background-image : url("img/muelle.svg");
 	height           : 16vw;
 	width            : 100vw;
 	bottom           : 0;
