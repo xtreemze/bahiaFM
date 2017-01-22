@@ -13,8 +13,8 @@
 	<body>
 		<div class="birds"></div>
 		<audio id="audioE"
-						controls="true"
-						autoplay="true"
+						controls="false"
+						autoplay="false"
 						name="media">
 			<source src="http://192.30.164.78:8000/bahia"
 							type="audio/mpeg">
@@ -23,8 +23,10 @@
 								src="css/img/logo.jpg"
 								alt="BahiaFM">
 					<div id="button1"
-									class="playing"></div>
+									class="paused"
+									onclick="checkPause();"></div>
 						<div class="muelle"></div>
+						<script src="js/playPause.min.js"></script>
 	</body>
 
 </html>

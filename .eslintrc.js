@@ -16,9 +16,9 @@ module.exports = {
   },
   "env": {
     "browser": true,
-    "jquery": true,
+    "jquery": false,
 		"worker": true,
-		"serviceworker": true,
+		"serviceworker": false,
   },
   "rules": {
     // "indent": [ "error", "tab" ],
@@ -36,7 +36,6 @@ module.exports = {
     "prefer-arrow-callback": ["off"]
   },
   "globals": {
-    "Materialize": true,
-    "intervalID": true
+
   },
 };

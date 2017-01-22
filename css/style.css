@@ -62,4 +62,5 @@ body {
 	background-size  : cover;
 	z-index          : 15;
 	background-repeat: no-repeat;
+	cursor           : pointer;
 }
