@@ -48,16 +48,27 @@ body {
 	background-image: url("img/pause.svg");
 }
 
+.error {
+	background-image: url("img/refresh.svg");
+}
+
 #button1 {
 	height           : 26vh;
 	min-width        : 48px;
-	margin           : 0 auto;
+	margin           : 0 37vh;
 	width            : 26vh;
 	position         : relative;
 	background-size  : cover;
 	z-index          : 15;
 	background-repeat: no-repeat;
 	cursor           : pointer;
+	background-color : rgba(255, 203, 5, 0);
+	border           : none;
+	color            : rgba(255, 203, 5, 0);
+	padding          : 0;
+	text-align       : center;
+	text-decoration  : none;
+	display          : inline-block;
 }
 
 ::selection {
