@@ -9,5 +9,4 @@ checkPause = function checkPause() {
     button1.className = ('playing');
   }
 };
-
 checkPause();
