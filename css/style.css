@@ -5,10 +5,11 @@ body {
 
 #audioE {
 	width   : 100%;
-	position: absolute;
+	position: fixed;
 	bottom  : 0;
-	z-index : 15;
-	display : none;
+	z-index : 16;
+	height  : 32px;
+	/*display : none;*/
 }
 
 .birds {
