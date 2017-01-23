@@ -21,10 +21,11 @@ body {
 }
 
 .muelle {
-	min-width: 100vw;
-	bottom   : -12vw;
-	position : fixed;
-	z-index  : 10;
+	min-width : 100vw;
+	bottom    : -45vh;
+	position  : fixed;
+	z-index   : 10;
+	min-height: 100vh;
 }
 
 .logo {
