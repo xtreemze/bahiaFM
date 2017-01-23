@@ -23,7 +23,7 @@ body {
 
 .muelle {
 	min-width : 100vw;
-	bottom    : -45vh;
+	bottom    : -55vh;
 	position  : fixed;
 	z-index   : 10;
 	min-height: 100vh;
