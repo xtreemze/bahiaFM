@@ -4,35 +4,27 @@ body {
 }
 
 #audioE {
-	width     : 100%;
-	min-height: 32px;
-	position  : absolute;
-	bottom    : 0;
-	z-index   : 15;
-	display   : none;
+	width   : 100%;
+	position: absolute;
+	bottom  : 0;
+	z-index : 15;
+	display : none;
 }
 
 .birds {
-	background-image : url("img/birds.svg");
-	top              : 28px;
-	right            : 36px;
-	height           : 12vh;
-	position         : absolute;
-	background-size  : contain;
-	background-repeat: no-repeat;
-	min-width        : 84px;
-	width            : 10vw;
+	top      : 28px;
+	right    : 36px;
+	height   : 12vh;
+	position : fixed;
+	min-width: 84px;
+	width    : 10vw;
 }
 
 .muelle {
-	background-image : url("img/muelle.svg");
-	height           : 24vh;
-	width            : 100vw;
-	bottom           : 0;
-	position         : absolute;
-	background-size  : cover;
-	background-repeat: no-repeat;
-	z-index          : 10;
+	min-width: 100vw;
+	bottom   : -12vw;
+	position : fixed;
+	z-index  : 10;
 }
 
 .logo {
