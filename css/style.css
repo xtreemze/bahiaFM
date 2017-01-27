@@ -54,7 +54,6 @@ body {
 
 .preload {
 	background-image: url("img/refresh.svg"), url("img/play.svg"), url("img/pause.svg");
-	visibility      : hidden;
 }
 
 #button1 {

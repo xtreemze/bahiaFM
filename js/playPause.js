@@ -27,7 +27,6 @@ const checkPlay = function check() {
   }
 };
 button1.addEventListener('click', checkPlay, false);
-button1.addEventListener('touchend', checkPlay, false);
 audioE.addEventListener('stalled', buttonError, false);
 audioE.addEventListener('paused', buttonPlay, false);
 audioE.addEventListener('error', buttonError, false);
