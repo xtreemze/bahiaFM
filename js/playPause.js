@@ -26,8 +26,7 @@ const checkPlay = function check() {
     offlineTrip = false;
   }
 };
-button1.addEventListener('touchend', checkPlay, false);
-button1.addEventListener('mousedown', checkPlay, false);
+button1.addEventListener('click', checkPlay, false);
 audioE.addEventListener('stalled', buttonError, false);
 audioE.addEventListener('paused', buttonPlay, false);
 audioE.addEventListener('error', buttonError, false);
