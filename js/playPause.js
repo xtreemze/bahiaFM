@@ -11,7 +11,7 @@ const buttonError = function addError() {
   button1.className = ('error');
   offlineTrip = true;
 };
-button1.addEventListener('click', function check() {
+const checkPlay = function check() {
   if (!offlineTrip && audioE.paused) {
     audioE.play();
   } else if (!offlineTrip) {
@@ -25,10 +25,13 @@ button1.addEventListener('click', function check() {
     audioE.play();
     offlineTrip = false;
   }
-}, false);
+};
+button1.addEventListener('click', checkPlay, false);
+button1.addEventListener('touchend', checkPlay, false);
 audioE.addEventListener('stalled', buttonError, false);
 audioE.addEventListener('paused', buttonPlay, false);
 audioE.addEventListener('error', buttonError, false);
 audioE.addEventListener('abort', buttonError, false);
 audioE.addEventListener('playing', buttonPause, false);
+
 audioE.play();
