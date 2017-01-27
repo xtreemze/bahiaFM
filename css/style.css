@@ -73,6 +73,8 @@ body {
 	text-align       : center;
 	text-decoration  : none;
 	outline          : none;
+	-webkit-highlight: none;
+	highlight        : none;
 }
 
 ::selection {
