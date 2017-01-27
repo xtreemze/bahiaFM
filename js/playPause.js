@@ -33,5 +33,5 @@ audioE.addEventListener('paused', buttonPlay, false);
 audioE.addEventListener('error', buttonError, false);
 audioE.addEventListener('abort', buttonError, false);
 audioE.addEventListener('playing', buttonPause, false);
-
+button1.className = 'error';
 audioE.play();
