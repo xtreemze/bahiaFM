@@ -57,8 +57,8 @@ body {
 }
 
 #button1 {
-	height                     : 43vw;
-	width                      : 43vw;
+	height                     : 52vw;
+	width                      : 52vw;
 	min-width                  : 48px;
 	margin                     : 0 auto;
 	position                   : relative;
@@ -76,11 +76,11 @@ body {
 	-webkit-highlight          : none;
 	highlight                  : none;
 	-webkit-tap-highlight-color: rgba(255,203,5,0);
-	transition                 : 55ms;
+	transition                 : 72ms;
 }
 
 .scaleDown {
-	transform: scale(.85);
+	transform: scale(.9);
 }
 
 ::selection {
@@ -120,8 +120,8 @@ body {
 	}
 
 	#button1 {
-		height: 30vh;
-		width : 30vh;
+		height: 34vh;
+		width : 34vh;
 		margin: 0 auto;
 	}
 }
