@@ -26,7 +26,17 @@ const checkPlay = function check() {
     offlineTrip = false;
   }
 };
+const scaleDown = function smallButton() {
+  button1.classList.add('scaleDown');
+};
+const scaleNormal = function regularButton() {
+  button1.classList.remove('scaleDown');
+};
 button1.addEventListener('click', checkPlay, false);
+button1.addEventListener('mousedown', scaleDown, false);
+button1.addEventListener('touchstart', scaleDown, false);
+button1.addEventListener('mouseup', scaleNormal, false);
+button1.addEventListener('touchend', scaleNormal, false);
 audioE.addEventListener('stalled', buttonError, false);
 audioE.addEventListener('paused', buttonPlay, false);
 audioE.addEventListener('error', buttonError, false);
