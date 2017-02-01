@@ -76,6 +76,11 @@ body {
 	-webkit-highlight          : none;
 	highlight                  : none;
 	-webkit-tap-highlight-color: rgba(255,203,5,0);
+	transition                 : 55ms;
+}
+
+.scaleDown {
+	transform: scale(.85);
 }
 
 ::selection {
