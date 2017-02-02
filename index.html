@@ -15,10 +15,12 @@
 
 	<body> <img class="birds" alt="BahiaFM" src="css/img/birds.svg"> <audio controls="" id="audioE">
 				<source src="http://192.30.164.78:8000/bahia"
-								 type="audio/mp3">
+								 type="audio/mp3" crossorigin="anonymous">
 					</audio> <img class="logo" src="css/img/bahia.svg" alt="BahiaFM">
 		<div id="button1" class="preload"></div> <img class="muelle" alt="BahiaFM" src="css/img/muelle.svg">
+		<div id="visualizer"><canvas id="canvasVis" height="500" width="400"></canvas></div>
 		<script src="js/playPause.min.js"></script>
+		<script src="js/vis.min.js"></script>
 	</body>
 
 </html>

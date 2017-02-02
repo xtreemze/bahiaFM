@@ -1,4 +1,7 @@
 var offlineTrip = false;
+const radioString = 'http://192.30.164.78:8000/bahia';
+audioE.src = radioString;
+audioE.crossOrigin = 'anonymous';
 const buttonPlay = function addPlaying() {
   button1.className = ('playing');
   offlineTrip = false;
@@ -21,7 +24,7 @@ const checkPlay = function check() {
   if (!window.navigator.onLine && audioE.paused) {
     buttonError();
   } else if (offlineTrip && window.navigator.onLine && audioE.paused) {
-    audioE.src = 'http://192.30.164.78:8000/bahia';
+    audioE.src = radioString;
     audioE.play();
     offlineTrip = false;
   }
