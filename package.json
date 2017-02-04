@@ -1,0 +1,29 @@
+{
+  "name": "bahiafm",
+  "version": "1.0.0",
+  "description": "Radio Bahia FM",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xtreemze/bahiaFM.git"
+  },
+  "keywords": [
+    "Radio"
+  ],
+  "author": "Carlos Velasco",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/xtreemze/bahiaFM/issues"
+  },
+  "homepage": "https://github.com/xtreemze/bahiaFM#readme",
+  "devDependencies": {
+    "eslint": "^3.13.0",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0"
+  }
+}
