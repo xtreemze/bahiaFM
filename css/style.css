@@ -1,7 +1,6 @@
 body {
 	margin          : 0;
 	background-color: #FFCB05;
-
 }
 
 #audioE {
@@ -77,7 +76,7 @@ body {
 	cursor                     : pointer;
 	background-color           : rgba(255,203,5,0);
 	border                     : 0;
-	color                      : rgba(255,203,5,0);
+	color                      : rgba(255, 203, 5,0);
 	padding                    : 0;
 	text-align                 : center;
 	text-decoration            : none;
@@ -89,7 +88,7 @@ body {
 }
 
 .scaleDown {
-	transform: scale(.9);
+	transform: scale(0.9);
 }
 
 ::selection {
@@ -100,7 +99,6 @@ body {
 		width    : 62vw;
 		max-width: 90vh;
 		margin   : 9vh 19vw 0;
-
 	}
 
 	#button1 {
