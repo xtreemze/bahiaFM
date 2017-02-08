@@ -46,9 +46,9 @@ function freqAnalyser() {
   gradient.addColorStop(0.1, '#FFCB05');
   canvasVisCtx.fillStyle = gradient;
   // DRAW Individual Bars
-  for (i = 0; i < numBars; i += 1) {
+  for (let i = 0; i < numBars; i += 1) {
     sum = 0;
-    for (j = 0; j < binSize; j += 1) {
+    for (let j = 0; j < binSize; j += 1) {
       sum += data[(i * binSize) + j];
     }
     average = sum / binSize;
