@@ -9,7 +9,7 @@ module.exports = {
 	    // "semi": [ "error", "always" ]
 	    // "newline-per-chained-call": ["off"],
 	    // "no-unused-vars": ["on"],
-	    "max-len": ["off", 100, 4],
+	    // "max-len": ["off", 100, 4],
 	    // "no-useless-concat": ["off"],
 	    // "no-tabs": ["off"],
 	    // "no-undef": ["off"],
