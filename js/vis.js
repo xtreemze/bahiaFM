@@ -1,7 +1,12 @@
 // fix browser vender for AudioContext and requestAnimationFrame
-window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext;
-window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame;
-window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame || window.mozCancelAnimationFrame || window.msCancelAnimationFrame;
+window.AudioContext = window.AudioContext || window.webkitAudioContext
+|| window.mozAudioContext || window.msAudioContext;
+window.requestAnimationFrame = window.requestAnimationFrame
+|| window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame
+|| window.msRequestAnimationFrame;
+window.cancelAnimationFrame = window.cancelAnimationFrame
+|| window.webkitCancelAnimationFrame || window.mozCancelAnimationFrame
+|| window.msCancelAnimationFrame;
 /*
  ██████  █████  ███    ██ ██    ██  █████  ███████
 ██      ██   ██ ████   ██ ██    ██ ██   ██ ██
@@ -11,7 +16,8 @@ window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancel
 */
 const canvasVisCtx = canvasVis.getContext('2d');
 // Create Analyzer
-const context = new (window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.msAudioContext)();
+const context = new (window.AudioContext || window.webkitAudioContext
+|| window.mozAudioContext || window.msAudioContext)();
 const analyser = context.createAnalyser();
 analyser.fftSize = 256;
 analyser.smoothingTimeConstant = 0.7;
@@ -46,9 +52,9 @@ function freqAnalyser() {
   gradient.addColorStop(0.1, '#FFCB05');
   canvasVisCtx.fillStyle = gradient;
   // DRAW Individual Bars
-  for (i = 0; i < numBars; i += 1) {
+  for (let i = 0; i < numBars; i += 1) {
     sum = 0;
-    for (j = 0; j < binSize; j += 1) {
+    for (let j = 0; j < binSize; j += 1) {
       sum += data[(i * binSize) + j];
     }
     average = sum / binSize;
@@ -57,13 +63,7 @@ function freqAnalyser() {
     canvasVisCtx.fillRect(i * barWidth, canvasVis.height, barWidth / 1.2, -scaledAverage);
   }
 }
-/*
-██████   ██████   ██████     ██████  ███████  █████  ██████  ██    ██
-██   ██ ██    ██ ██          ██   ██ ██      ██   ██ ██   ██  ██  ██
-██   ██ ██    ██ ██          ██████  █████   ███████ ██   ██   ████
-██   ██ ██    ██ ██          ██   ██ ██      ██   ██ ██   ██    ██
-██████   ██████   ██████     ██   ██ ███████ ██   ██ ██████     ██
-*/
+
 // connect audioE to Analyzer via source1 variable then Analyzer to Destination
 const source1 = context.createMediaElementSource(audioE);
 source1.connect(analyser);
