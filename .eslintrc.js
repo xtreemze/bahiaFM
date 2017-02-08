@@ -2,9 +2,6 @@
 // minifyOnSave: false
 module.exports = {
     "extends": "airbnb",
-    "plugins": [
-        "react"
-    ],
 		"rules": {
 	    // "indent": [ "warn", "tab" ],
 	    // "linebreak-style": [ "warn", "windows" ],
