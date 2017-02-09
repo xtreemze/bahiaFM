@@ -1,8 +1,3 @@
-body {
-	margin          : 0;
-	background-color: #FFCB05;
-}
-
 #audioE {
 	width   : 100%;
 	position: fixed;
@@ -11,41 +6,12 @@ body {
 	height  : 32px;
 	display : none;
 }
-
-.birds {
-	top      : 28px;
-	right    : 36px;
-	height   : 12vh;
-	position : fixed;
-	min-width: 84px;
-	width    : 25vw;
-}
-
-.muelle {
-	max-width : 110vw;
-	bottom    : -30vh;
-	position  : fixed;
-	z-index   : 10;
-	min-height: 76vh;
-	max-height: 80vh;
-	min-width : 104vw;
-	left      : -4vw;
-}
-
 #visualizer {
 	width   : 100%;
 	height  : 100%;
 	position: fixed;
 	bottom  : 0;
 	z-index : 8;
-}
-
-.logo {
-	width    : 72vw;
-	max-width: 90vh;
-	margin   : 28vh 14vw 0;
-	position : relative;
-	z-index  : 11;
 }
 
 .playing {
