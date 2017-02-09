@@ -1,39 +1,44 @@
 #audioE {
-	width   : 100%;
-	bottom  : 0;
-	z-index : 16;
-	height  : 32px;
-	display : none;
+	width  : 100%;
+	bottom : 0;
+	z-index: 16;
+	height : 32px;
+	display: none;
 }
 
 #visualizer {
-	width   : 100%;
-	height  : 100%;
-	bottom  : 0;
-	z-index : 8;
+	width  : 100%;
+	height : 100%;
+	bottom : 0;
+	z-index: 8;
 }
 
-.birds,.muelle,#audioE,#visualizer{position:fixed}
+#audioE,
+#visualizer,
+.birds,
+.muelle {
+	position: fixed;
+}
 
 .birds {
-	top             : 28px;
-	right           : 36px;
-	height          : 12vh;
-	min-width       : 84px;
-	width           : 25vw;
-	background-image: url("img/birds.svg");
+	top              : 28px;
+	right            : 36px;
+	height           : 12vh;
+	min-width        : 84px;
+	width            : 25vw;
+	background-image : url("img/birds.svg");
 	background-repeat: no-repeat;
 }
 
 .muelle {
-	max-width       : 110vw;
-	bottom          : -30vh;
-	z-index         : 10;
-	min-height      : 42vh;
-	max-height      : 80vh;
-	min-width       : 104vw;
-	left            : -4vw;
-	background-image: url("img/muelle.svg");
+	max-width        : 110vw;
+	bottom           : -30vh;
+	z-index          : 10;
+	min-height       : 48vh;
+	max-height       : 80vh;
+	min-width        : 104vw;
+	left             : -3vw;
+	background-image : url("img/muelle.svg");
 	background-repeat: no-repeat;
 }
 
@@ -123,12 +128,13 @@
 }
 @media only screen and (min-width: 1441px) {
 	.muelle {
-		max-width : 110vw;
-		bottom    : -30vh;
-		min-height: 45vh;
-		max-height: 80vh;
-		min-width : 104vw;
-		left      : -4vw;
+		max-width: 110vw;
+    bottom: -21vh;
+    min-height: 45vh;
+    max-height: 80vh;
+    min-width: 104vw;
+    left: -4vw;
+    background-size: cover;
 	}
 
 	.logo {
@@ -144,13 +150,12 @@
 		margin   : 0 auto;
 	}
 }
-@media only screen and (min-height: 20px)and (max-height:500px) {
+@media only screen and (min-height: 20px)and (max-height:400px) {
 	#button1 {
 		height    : 42vh;
 		width     : 42vh;
-		margin    : 0 auto;
-		float     : left;
-		margin-top: 24vh;
+		margin    : 22vh 5vw 0;
+		float     : right;
 	}
 
 	.logo {
@@ -158,5 +163,11 @@
 		max-width: 90vh;
 		margin   : 38vh 9vw 0;
 		float    : left;
+	}
+
+	.muelle {
+		max-height: 200vh;
+		min-height: 72vh;
+		bottom    : -40vh;
 	}
 }
