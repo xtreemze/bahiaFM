@@ -1,4 +1,4 @@
-var offlineTrip = false;
+let offlineTrip = false;
 const radioString = 'http://192.30.164.78:8000/bahia';
 audioE.src = radioString;
 audioE.crossOrigin = 'anonymous';

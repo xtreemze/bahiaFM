@@ -4,7 +4,10 @@
   "description": "Radio Bahia FM",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --progress --colors -p --inline --compress",
+    "export": "webpack --progress --colors",
+    "exportp": "webpack --progress --colors -p"
   },
   "repository": {
     "type": "git",
@@ -20,11 +23,21 @@
   },
   "homepage": "https://github.com/xtreemze/bahiaFM#readme",
   "devDependencies": {
-    "eslint": "^3.13.0",
-    "eslint-config-airbnb": "^14.0.0",
+    "css-loader": "^0.26.1",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.2",
-    "eslint-plugin-react": "^6.9.0"
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "file-loader": "^0.10.0",
+    "offline-plugin": "^4.6.1",
+    "style-loader": "^0.13.1",
+    "stylelint": "^7.8.0",
+    "stylelint-config-standard": "^16.0.0",
+    "svgo-loader": "^1.1.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
   },
-  "dependencies": {}
-}
+  "dependencies": {
+    "offline-plugin": "^4.6.1"
+  }
