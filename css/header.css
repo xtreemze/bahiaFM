@@ -3,15 +3,6 @@ body {
 	background-color: #FFCB05;
 }
 
-.birds {
-	top      : 28px;
-	right    : 36px;
-	height   : 12vh;
-	position : fixed;
-	min-width: 84px;
-	width    : 25vw;
-}
-
 .muelle {
 	max-width : 110vw;
 	bottom    : -30vh;

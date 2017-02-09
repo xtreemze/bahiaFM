@@ -22,7 +22,7 @@ module.exports = {
             options: {
               plugins: [
           { removeTitle: true },
-          { convertColors: { shorthex: false } },
+          { convertColors: { shorthex: true } },
           { convertPathData: false },
               ],
             },
@@ -35,7 +35,9 @@ module.exports = {
   plugins: [
     // ... other plugins
     // it always better if OfflinePlugin is the last plugin added
-    new OfflinePlugin(),
+    new OfflinePlugin({ externals: [
+      './index.html',
+    ] }),
   ],
 
 
