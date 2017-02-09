@@ -22,5 +22,6 @@ module.exports = {
 			"canvasVis": true,
 			"audioE": true,
 			"button1": true,
+			"document": true,
 		},
 };
