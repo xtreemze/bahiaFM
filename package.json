@@ -5,9 +5,9 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --progress --colors -p",
+    "dev": "webpack-dev-server --progress --colors --host 0.0.0.0 --port 8080 --inline --compress -p",
     "export": "webpack --progress --colors -p",
-    "exportp": "webpack --progress --colors"
+    "exportw": "webpack --progress --colors --watch -p"
   },
   "repository": {
     "type": "git",
