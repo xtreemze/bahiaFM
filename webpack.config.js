@@ -1,6 +1,6 @@
-const OfflinePlugin = require('offline-plugin');
+const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
 const ClosureCompilerPlugin = require('webpack-closure-compiler');
-const HTMLMinifierPlugin = require('html-minifier-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 
 module.exports = {
@@ -12,16 +12,30 @@ module.exports = {
   module: {
 
     rules: [{
+        test: /\indexB.html$/,
+        loaders: ['file-loader?name=[path]index.[ext]?[hash]!', 'extract-loader', 'html-loader']
+      },
+
+      {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+
+      {
+        test: /\.png$/,
+        use: ['url-loader?limit=3000?name=[path][name].[ext]?[hash]!'],
+      },
+      {
+        test: /\.jpg$/,
+        use: ['url-loader?limit=3000?name=[path][name].[ext]?[hash]!'],
       },
       {
         test: /\.svg$/,
         use: [{
-            loader: 'file-loader?name=[path][name].[ext]?[hash]!',
+            loader: 'svg-url-loader?limit=5000?name=[path][name].[ext]?[hash]!',
           },
           {
-            loader: 'svgo-loader',
+            loader: 'svgo-loader?name=[path][name].[ext]?[hash]!',
             options: {
               plugins: [
                 { removeTitle: true },
@@ -41,6 +55,10 @@ module.exports = {
 
   plugins: [
     // ... other plugins
+    new HtmlMinifierPlugin({
+      // HTMLMinifier options 
+    }),
+
     new ClosureCompilerPlugin({
       compiler: {
         language_in: 'ECMASCRIPT6',
@@ -57,56 +75,4 @@ module.exports = {
     }),
   ],
 
-
 };
-
-
-
-// module.exports = {
-//   entry: './entry.js',
-//   output: {
-//     path: __dirname,
-//     filename: 'bundle.js',
-//   },
-//   module: {
-//   test: /\.svg$/,
-//   use: [
-//     {
-//       loader: 'file-loader?name=[name].svg'
-//     },
-//     {
-//       loader: 'svgo-loader',
-//       options: {
-//         plugins: [
-//           {removeTitle: true},
-//           {convertColors: {shorthex: false}},
-//           {convertPathData: false}
-//         ]
-//       }
-//     }
-//   ]
-// },
-//   module: {
-//     loaders: [
-//       { test: /\.html$/, loaders: ['file-loader?name=[name].[ext]', 'extract-loader', 'html-loader'] },
-//     ]
-//   },
-
-//   module: {
-//     rules: [
-//       {
-//         test: /\.css$/,
-//         use: [
-//           { loader: 'style-loader'},
-//           {
-//             loader: 'css-loader',
-//             options: {
-//               modules: false
-//             }
-//           }
-//         ]
-//       }
-//     ]
-//   },
-
-// };
