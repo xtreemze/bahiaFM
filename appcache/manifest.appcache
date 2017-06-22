@@ -1,11 +1,16 @@
 CACHE MANIFEST
-#ver:2/20/2017, 4:44:53 PM
-#plugin:4.6.1
+#ver:2017-6-23 01:20:35
+#plugin:4.8.1
 
 CACHE:
-../index.html?8131276455fad23e3d8d42bc7140d5e8!
-../bundle.js
+../css/img/pause.svg
+../css/img/play.svg
+../css/img/refresh.svg
 ../
+../css/img/birds.svg
+../css/img/muelle.svg
+../css/img/bahia.svg
+../bundle.js
 
 NETWORK:
 *
