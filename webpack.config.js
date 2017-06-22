@@ -1,5 +1,6 @@
 const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
-const ClosureCompilerPlugin = require('webpack-closure-compiler');
+const ClosureCompiler = require('google-closure-compiler-js')
+  .webpack;
 const OfflinePlugin = require('offline-plugin');
 module.exports = {
   entry: './entry.js',
@@ -10,44 +11,69 @@ module.exports = {
   module: {
     rules: [{
       test: /\indexB.html$/,
-      loaders: ['file-loader?name=[path]index.[ext]?[hash]!', 'extract-loader', 'html-loader']
+      loaders: ['file-loader?name=[path]index.[ext]',
+        'extract-loader', 'html-loader'
+      ]
     }, {
       test: /\.css$/,
       use: ['style-loader', 'css-loader'],
     }, {
-      test: /\.png$/,
-      use: ['url-loader?limit=3000?name=[path][name].[ext]?[hash]!'],
-    }, {
-      test: /\.jpg$/,
-      use: ['url-loader?limit=3000?name=[path][name].[ext]?[hash]!'],
-    }, {
       test: /\.svg$/,
       use: [{
-        loader: 'svg-url-loader?limit=5000?name=[path][name].[ext]?[hash]!',
-      }, {
-        loader: 'svgo-loader?name=[path][name].[ext]?[hash]!',
+        loader: 'file-loader?name=[path][name].[ext]',
+      }],
+    }, {
+      test: /\.js$/,
+      exclude: [/node_modules/],
+      use: [{
+        loader: 'babel-loader',
         options: {
-          plugins: [{ removeTitle: true }, { convertColors: { shorthex: true } }, { convertPathData: false }, ],
+          presets: [
+            ['es2015', { modules: false }],
+          ],
         },
-      }, ],
-    }, ],
+      }],
+    }],
   },
   plugins: [
     // ... other plugins
     new HtmlMinifierPlugin({
       // HTMLMinifier options 
     }),
-    new ClosureCompilerPlugin({
+    new ClosureCompiler({
       compiler: {
         language_in: 'ECMASCRIPT6',
         language_out: 'ECMASCRIPT5',
-        compilation_level: 'ADVANCED'
+        compilation_level: 'ADVANCED',
+        warning_level: 'QUIET',
+        externs: [{ src: `
+                      jsonUpdate();
+                      stats;
+               ` }],
       },
-      concurrency: 3,
+      makeSourceMaps: true,
+      concurrency: 6,
     }),
+    /*        new ClosureCompilerPlugin({
+                compiler: {
+                    language_in: 'ECMASCRIPT6',
+                    language_out: 'ECMASCRIPT5',
+                    compilation_level: 'SIMPLE'
+                },
+                concurrency: 4,
+            }),*/
     // it always better if OfflinePlugin is the last plugin added
     new OfflinePlugin({
-      externals: ['./index.html', ]
+      caches: 'all',
+      responseStrategy: 'network-first',
+      updateStrategy: 'all',
+      minify: 'true',
+      ServiceWorker: {
+        events: 'true',
+      },
+      AppCache: {
+        events: 'true',
+      },
     }),
   ],
 };
