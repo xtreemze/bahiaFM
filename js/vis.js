@@ -29,39 +29,35 @@ window.analyser.maxDecibels = -35;
 ██   ██ ██   ██ ██   ██ ██ ███ ██
 ██████  ██   ██ ██   ██  ███ ███
 */
-window.freqAnalyser = () => {
-  let sum;
-  let average;
-  let barWidth;
-  let scaledAverage;
-  const numBars = 92;
-  const data = new Uint8Array(92);
-  const gradient = window.canvasVisCtx.createLinearGradient(0, window.canvasVis
+window.freqAnalyser = function freqAnalyser() {
+  window.numBars = 92;
+  window.data = new Uint8Array(92);
+  window.gradient = window.canvasVisCtx.createLinearGradient(0, window.canvasVis
     .height, 0, 0);
-  const binSize = Math.floor((data.length) / numBars);
+  window.binSize = Math.floor((window.data.length) / window.numBars);
   window.requestAnimationFrame(window.freqAnalyser);
-  window.analyser.getByteFrequencyData(data);
+  window.analyser.getByteFrequencyData(window.data);
   if (!window.analyser) {
-    window.canvasVis.html(data[0]);
+    window.canvasVis.html(window.data[0]);
   }
   // clear canvasVis
   window.canvasVisCtx.clearRect(0, 0, window.canvasVis.width, window.canvasVis
     .height);
-  gradient.addColorStop(0.98, '#FFCB05');
-  gradient.addColorStop(0.3, '#00aeef');
-  gradient.addColorStop(0.1, '#FFCB05');
-  window.canvasVisCtx.fillStyle = gradient;
+  window.gradient.addColorStop(0.98, '#FFCB05');
+  window.gradient.addColorStop(0.3, '#00aeef');
+  window.gradient.addColorStop(0.1, '#FFCB05');
+  window.canvasVisCtx.fillStyle = window.gradient;
   // DRAW Individual Bars
-  for (let i = 0; i < numBars; i += 1) {
-    sum = 0;
-    for (let j = 0; j < binSize; j += 1) {
-      sum += data[(i * binSize) + j];
+  for (let i = 0; i < window.numBars; i += 1) {
+    window.sum = 0;
+    for (let j = 0; j < window.binSize; j += 1) {
+      window.sum += window.data[(i * window.binSize) + j];
     }
-    window.average = sum / binSize;
-    window.barWidth = window.canvasVis.width / numBars;
-    window.scaledAverage = (average / 256) * window.canvasVis.height;
-    window.canvasVisCtx.fillRect(i * barWidth, window.canvasVis.height,
-      barWidth / 1.2, -scaledAverage);
+    window.average = window.sum / window.binSize;
+    window.barWidth = window.canvasVis.width / window.numBars;
+    window.scaledAverage = (window.average / 256) * window.canvasVis.height;
+    window.canvasVisCtx.fillRect(i * window.barWidth, window.canvasVis.height,
+      window.barWidth / 1.2, -window.scaledAverage);
   }
 };
 // connect audioE to Analyzer via source1 variable then Analyzer to Destination
