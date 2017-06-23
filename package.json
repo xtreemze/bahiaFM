@@ -35,7 +35,6 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
     "extract-loader": "^0.1.0",
-    "extract-text-webpack-plugin": "^2.1.2",
     "file-loader": "^0.10.1",
     "glob-all": "^3.1.0",
     "google-closure-compiler-js": "^20170521.0.0",

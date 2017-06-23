@@ -1,49 +1,50 @@
-let offlineTrip = false;
-const radioString = 'http://192.30.164.78:8000/bahia';
-audioE.src = radioString;
-audioE.crossOrigin = 'anonymous';
-const buttonPlay = function addPlaying() {
-  button1.className = ('playing');
-  offlineTrip = false;
+window.offlineTrip = false;
+window.radioString = 'http://192.30.164.78:8000/bahia';
+window.audioE.src = window.radioString;
+window.audioE.crossOrigin = 'anonymous';
+window.buttonPlay = function addPlaying() {
+  window.button1.className = ('playing');
+  window.offlineTrip = false;
 };
-const buttonPause = function addPlaying() {
-  button1.className = ('paused');
-  offlineTrip = false;
+window.buttonPause = function addPlaying() {
+  window.button1.className = ('paused');
+  window.offlineTrip = false;
 };
-const buttonError = function addError() {
-  button1.className = ('error');
-  offlineTrip = true;
+window.buttonError = function addError() {
+  window.button1.className = ('error');
+  window.offlineTrip = true;
 };
-const checkPlay = function check() {
-  if (!offlineTrip && audioE.paused) {
-    audioE.play();
-  } else if (!offlineTrip) {
-    audioE.pause();
-    buttonPlay();
+window.checkPlay = function check() {
+  if (!window.offlineTrip && window.audioE.paused) {
+    window.audioE.play();
+  } else if (!window.offlineTrip) {
+    window.audioE.pause();
+    window.buttonPlay();
   }
-  if (!window.navigator.onLine && audioE.paused) {
-    buttonError();
-  } else if (offlineTrip && window.navigator.onLine && audioE.paused) {
-    audioE.src = radioString;
-    audioE.play();
-    offlineTrip = false;
+  if (!window.navigator.onLine && window.audioE.paused) {
+    window.buttonError();
+  } else if (window.offlineTrip && window.navigator.onLine && window.audioE
+    .paused) {
+    window.audioE.src = window.radioString;
+    window.audioE.play();
+    window.offlineTrip = false;
   }
 };
-const scaleDown = function smallButton() {
-  button1.classList.add('scaleDown');
+window.scaleDown = function smallButton() {
+  window.button1.classList.add('scaleDown');
 };
-const scaleNormal = function regularButton() {
-  button1.classList.remove('scaleDown');
+window.scaleNormal = function regularButton() {
+  window.button1.classList.remove('scaleDown');
 };
-button1.addEventListener('click', checkPlay, false);
-button1.addEventListener('mousedown', scaleDown, false);
-button1.addEventListener('touchstart', scaleDown, false);
-button1.addEventListener('mouseup', scaleNormal, false);
-button1.addEventListener('touchend', scaleNormal, false);
-audioE.addEventListener('stalled', buttonError, false);
-audioE.addEventListener('paused', buttonPlay, false);
-audioE.addEventListener('error', buttonError, false);
-audioE.addEventListener('abort', buttonError, false);
-audioE.addEventListener('playing', buttonPause, false);
-button1.className = 'error';
-audioE.play();
+window.button1.addEventListener('click', window.checkPlay, false);
+window.button1.addEventListener('mousedown', window.scaleDown, false);
+window.button1.addEventListener('touchstart', window.scaleDown, false);
+window.button1.addEventListener('mouseup', window.scaleNormal, false);
+window.button1.addEventListener('touchend', window.scaleNormal, false);
+window.audioE.addEventListener('stalled', window.buttonError, false);
+window.audioE.addEventListener('paused', window.buttonPlay, false);
+window.audioE.addEventListener('error', window.buttonError, false);
+window.audioE.addEventListener('abort', window.buttonError, false);
+window.audioE.addEventListener('playing', window.buttonPause, false);
+window.button1.className = 'error';
+window.audioE.play();
