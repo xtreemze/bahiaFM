@@ -25,3 +25,4 @@ window.jsonUpdate = () => (fetch(url)
     return console.error(error);
   }));
 window.setInterval(() => window.jsonUpdate(), 10000);
+window.onload = () => window.jsonUpdate();
