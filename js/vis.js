@@ -39,7 +39,7 @@ window.freqanalyser = function freqanalyser() {
     .height, 0, 0);
   window.binSize = Math.floor((window.data.length) / window.numBars);
   window.requestAnimationFrame(window.freqanalyser);
-  if (!window.analyser.getByteFrequencyData === false) {
+  if ('AudioContext' in window) {
     window.analyser.getByteFrequencyData(window.data);
   } else {
     for (let b = window.data.length; b > 0; b -= 1) {
