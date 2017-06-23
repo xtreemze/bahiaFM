@@ -13,6 +13,7 @@ db    db d8888b. d8888b.  .d8b.  d888888b d88888b .d8888.
                                                           
                                                           
 */
+/*
 const runtime = require('offline-plugin/runtime');
 runtime.install({
   onUpdating: () => {
@@ -32,3 +33,4 @@ runtime.install({
     console.log('SW Event:', 'onUpdateFailed');
   }
 });
+*/
