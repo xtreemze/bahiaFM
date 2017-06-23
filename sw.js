@@ -1,4 +1,36 @@
-var __wpo = {"assets":{"main":["./index.html?8131276455fad23e3d8d42bc7140d5e8!","./bundle.js","./"],"additional":[],"optional":[]},"externals":["./"],"hashesMap":{"2a21d73f9c5ae09ed82a5ece1c7b44956e3c4df5":"./index.html?8131276455fad23e3d8d42bc7140d5e8!","239a8060e3ca794cc8559fa97101893d14ebb9c9":"./bundle.js"},"strategy":"changed","responseStrategy":"cache-first","version":"2/20/2017, 4:44:53 PM","name":"webpack-offline","pluginVersion":"4.6.1","relativePaths":true};
+var __wpo = {
+  "assets": {
+    "main": [
+      "./css/img/pause.svg",
+      "./css/img/play.svg",
+      "./css/img/refresh.svg",
+      "./",
+      "./css/img/birds.svg",
+      "./css/img/muelle.svg",
+      "./css/img/bahia.svg",
+      "./bundle.js"
+    ],
+    "additional": [],
+    "optional": []
+  },
+  "externals": [],
+  "hashesMap": {
+    "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./css/img/pause.svg",
+    "aa721359d10819b9a931c1ff9072fe192c7380b7": "./css/img/play.svg",
+    "0e8292b8c6663108c6461aa43d7026db332cf91f": "./css/img/refresh.svg",
+    "23f6676be71c4bf71430e70362bd8340196cea32": "./",
+    "1b6b825ea2bebb98575e741d3b0ffaa172c24167": "./css/img/birds.svg",
+    "a77d52d67efdac8a6d279c26a4cc4b22e3a79520": "./css/img/muelle.svg",
+    "4227df2005343bd2cc8249809e4fcd473cdc5244": "./css/img/bahia.svg",
+    "22a4df5b82ba5747ef7927e224011c56e637b150": "./bundle.js"
+  },
+  "strategy": "all",
+  "responseStrategy": "network-first",
+  "version": "2017-6-23 14:22:02",
+  "name": "webpack-offline",
+  "pluginVersion": "4.8.1",
+  "relativePaths": true
+};
 
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
