@@ -38,7 +38,7 @@ window.scaleNormal = function regularButton() {
 };
 window.button1.addEventListener('click', window.checkPlay, false);
 window.button1.addEventListener('mousedown', window.scaleDown, false);
-window.button1.addEventListener('touchstart', window.scaleDown, false);
+window.button1.addEventListener('touchstart', window.scaleDown, { passive: true });
 window.button1.addEventListener('mouseup', window.scaleNormal, false);
 window.button1.addEventListener('touchend', window.scaleNormal, false);
 window.audioE.addEventListener('stalled', window.buttonError, false);
