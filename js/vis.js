@@ -15,13 +15,15 @@ window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancel
 window.canvasVis = document.getElementById('canvasVisualizer');
 window.canvasVisCtx = window.canvasVis.getContext('2d');
 // Create analyser
-window.context = new(window.AudioContext || window.webkitAudioContext ||
-  window.mozAudioContext || window.msAudioContext);
+window.AudioContext = window.AudioContext || window.webkitAudioContext;
+window.context = new window.AudioContext();
 window.analyser = window.context.createAnalyser();
 window.analyser.fftSize = 256;
 window.analyser.smoothingTimeConstant = 0.7;
 window.analyser.minDecibels = -160;
 window.analyser.maxDecibels = -35;
+window.number = 90;
+window.agregate = 0.0005;
 // draw the analyser to the canvasVis
 /*
 ██████  ██████   █████  ██     ██
@@ -37,10 +39,20 @@ window.freqanalyser = function freqanalyser() {
     .height, 0, 0);
   window.binSize = Math.floor((window.data.length) / window.numBars);
   window.requestAnimationFrame(window.freqanalyser);
-  window.analyser.getByteFrequencyData(window.data);
-  if (!window.analyser) {
-    window.canvasVis.html(window.data[0]);
+  if (!window.analyser.getByteFrequencyData === false) {
+    window.analyser.getByteFrequencyData(window.data);
+  } else {
+    for (let b = window.data.length; b > 0; b -= 1) {
+      if (window.number < 90) { window.agregate = 0.0005; }
+      if (window.number > 230) { window.agregate = -0.0005; }
+      if (document.getElementById('audioE')
+        .paused === false) { window.number += window.agregate; }
+      window.data[b] = window.number;
+    }
   }
+  // if (!window.analyser) {
+  //   window.canvasVis.html(window.data[0]);
+  // }
   // clear canvasVis
   window.canvasVisCtx.clearRect(0, 0, window.canvasVis.width, window.canvasVis
     .height);
