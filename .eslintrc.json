@@ -22,5 +22,7 @@
     "linebreak-style": "off",
     "no-console": "off"
   },
-  "globals": {}
+  "globals": {
+
+  }
 }
