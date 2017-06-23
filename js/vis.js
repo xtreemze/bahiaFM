@@ -12,10 +12,11 @@ window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancel
 ██      ██   ██ ██  ██ ██  ██  ██  ██   ██      ██
  ██████ ██   ██ ██   ████   ████   ██   ██ ███████
 */
+window.canvasVis = document.getElementById('canvasVisualizer');
 window.canvasVisCtx = window.canvasVis.getContext('2d');
-// Create Analyzer
+// Create analyser
 window.context = new(window.AudioContext || window.webkitAudioContext ||
-  window.mozAudioContext || window.msAudioContext)();
+  window.mozAudioContext || window.msAudioContext);
 window.analyser = window.context.createAnalyser();
 window.analyser.fftSize = 256;
 window.analyser.smoothingTimeConstant = 0.7;
@@ -29,13 +30,13 @@ window.analyser.maxDecibels = -35;
 ██   ██ ██   ██ ██   ██ ██ ███ ██
 ██████  ██   ██ ██   ██  ███ ███
 */
-window.freqAnalyser = function freqAnalyser() {
+window.freqanalyser = function freqanalyser() {
   window.numBars = 92;
   window.data = new Uint8Array(92);
   window.gradient = window.canvasVisCtx.createLinearGradient(0, window.canvasVis
     .height, 0, 0);
   window.binSize = Math.floor((window.data.length) / window.numBars);
-  window.requestAnimationFrame(window.freqAnalyser);
+  window.requestAnimationFrame(window.freqanalyser);
   window.analyser.getByteFrequencyData(window.data);
   if (!window.analyser) {
     window.canvasVis.html(window.data[0]);
@@ -60,11 +61,11 @@ window.freqAnalyser = function freqAnalyser() {
       window.barWidth / 1.2, -window.scaledAverage);
   }
 };
-// connect audioE to Analyzer via source1 variable then Analyzer to Destination
+// connect audioE to analyser via source1 variable then analyser to Destination
 window.source1 = window.context.createMediaElementSource(window.audioE);
 window.source1.connect(window.analyser);
 window.analyser.connect(window.context.destination);
-window.freqAnalyser();
+window.freqanalyser();
 window.resizeCanvas = function resizeVis() {
   window.canvasVis.width = window.innerWidth;
   window.canvasVis.height = window.innerHeight;
