@@ -18,15 +18,15 @@ var __wpo = {
     "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./css/img/pause.svg",
     "aa721359d10819b9a931c1ff9072fe192c7380b7": "./css/img/play.svg",
     "0e8292b8c6663108c6461aa43d7026db332cf91f": "./css/img/refresh.svg",
-    "23f6676be71c4bf71430e70362bd8340196cea32": "./",
+    "68563f68cefc1d8d512db6d52f95406a01793713": "./",
     "1b6b825ea2bebb98575e741d3b0ffaa172c24167": "./css/img/birds.svg",
     "a77d52d67efdac8a6d279c26a4cc4b22e3a79520": "./css/img/muelle.svg",
     "4227df2005343bd2cc8249809e4fcd473cdc5244": "./css/img/bahia.svg",
-    "11502731be26a971ef156f8332e739313ed160aa": "./bundle.js"
+    "5e1491b1399de4d00ae2620bf6303e27275d161f": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-6-23 14:49:18",
+  "version": "2017-6-23 15:04:16",
   "name": "webpack-offline",
   "pluginVersion": "4.8.1",
   "relativePaths": true
