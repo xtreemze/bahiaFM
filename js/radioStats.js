@@ -6,10 +6,10 @@ window.stats = {
   title: null,
 };
 window.jsonUpdate = () => (fetch(url)
-  .then(res => res.json())
-  .then((out) => {
-    window.json0 = out;
-    window.json1 = out.icestats.source[0];
+  .then(response => response.json())
+  .then((output) => {
+    window.json0 = output;
+    window.json1 = output.icestats.source[0];
     window.stats.radioName = window.json1.server_name;
     window.stats.listeners = window.json1.listeners;
     window.stats.listenerPeak = window.json1.listener_peak;
@@ -20,5 +20,8 @@ window.jsonUpdate = () => (fetch(url)
     document.getElementById('listenersDiv')
       .innerText = `Oyentes: ${window.stats.listeners}`;
   })
-  .catch(err => console.error(err)));
-window.setInterval(window.jsonUpdate(), 10000);
+  .catch((error) => {
+    window.jsonUpdate();
+    return console.error(error);
+  }));
+window.setInterval(() => window.jsonUpdate(), 10000);
