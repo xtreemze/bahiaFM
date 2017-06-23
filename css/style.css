@@ -26,7 +26,7 @@
 }
 
 #listenersDiv {
-    font-size: 1vh;
+    font-size: 1.2vh;
     font-weight: 800;
     margin-top: 2vh;
     height: 1vh;
@@ -64,10 +64,6 @@
 
 .error {
     background-image: url("img/refresh.svg");
-}
-
-.preload {
-    background-image: url("img/refresh.svg"), url("img/play.svg"), url("img/pause.svg");
 }
 
 #button1 {

@@ -1,12 +1,12 @@
 var __wpo = {
   "assets": {
     "main": [
-      "./css/img/pause.svg",
-      "./css/img/play.svg",
-      "./css/img/refresh.svg",
       "./",
       "./css/img/birds.svg",
       "./css/img/muelle.svg",
+      "./css/img/play.svg",
+      "./css/img/pause.svg",
+      "./css/img/refresh.svg",
       "./css/img/bahia.svg",
       "./bundle.js"
     ],
@@ -15,18 +15,18 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./css/img/pause.svg",
-    "aa721359d10819b9a931c1ff9072fe192c7380b7": "./css/img/play.svg",
-    "0e8292b8c6663108c6461aa43d7026db332cf91f": "./css/img/refresh.svg",
-    "68563f68cefc1d8d512db6d52f95406a01793713": "./",
+    "712c645e51862022444da9d2fa164caf9a99d616": "./",
     "1b6b825ea2bebb98575e741d3b0ffaa172c24167": "./css/img/birds.svg",
     "a77d52d67efdac8a6d279c26a4cc4b22e3a79520": "./css/img/muelle.svg",
+    "aa721359d10819b9a931c1ff9072fe192c7380b7": "./css/img/play.svg",
+    "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./css/img/pause.svg",
+    "0e8292b8c6663108c6461aa43d7026db332cf91f": "./css/img/refresh.svg",
     "4227df2005343bd2cc8249809e4fcd473cdc5244": "./css/img/bahia.svg",
-    "bea5db2b5a9c70bede08ecbb60fba3cb5a96869d": "./bundle.js"
+    "9be2dea100de6f25c30993b105b0120d2b704665": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-6-23 17:27:52",
+  "version": "2017-6-23 19:48:25",
   "name": "webpack-offline",
   "pluginVersion": "4.8.1",
   "relativePaths": true
@@ -67,9 +67,6 @@ var __wpo = {
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
 /******/
-/******/ 	// identity function for calling harmony imports with the correct context
-/******/ 	__webpack_require__.i = function(value) { return value; };
-/******/
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -97,17 +94,11 @@ var __wpo = {
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -804,8 +795,14 @@ function logGroup(title, assets) {
 loaders: {},
 cacheMaps: [],
 });
-        module.exports = __webpack_require__(0)
+        module.exports = __webpack_require__(1)
       
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+
 
 /***/ })
 /******/ ]);
