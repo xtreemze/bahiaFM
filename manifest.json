@@ -1,16 +1,18 @@
 {
-  "name": "BahiaFM",
-  "short_name": "BahiaFM",
-  "icons": [{
-    "src": "/android-chrome-192x192.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  }, {
-    "src": "/android-chrome-256x256.png",
-    "sizes": "256x256",
-    "type": "image/png"
-  }],
-  "theme_color": "#FFCB05",
-  "background_color": "#FFCB05",
-  "display": "fullscreen"
+    "name": "BahiaFM",
+    "icons": [
+        {
+            "src": "http://bahiahn.com/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "http://bahiahn.com/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffcb05",
+    "background_color": "#ffcb05",
+    "display": "standalone"
 }
