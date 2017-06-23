@@ -47,7 +47,7 @@ module.exports = {
       compiler: {
         language_in: 'ECMASCRIPT6',
         language_out: 'ECMASCRIPT5',
-        compilation_level: 'SIMPLE',
+        compilation_level: 'ADVANCED',
         warning_level: 'QUIET',
         externs: [{ src: `
                       jsonUpdate();
