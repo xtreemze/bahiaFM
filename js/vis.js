@@ -23,7 +23,7 @@ window.analyser.fftSize = 256;
 window.analyser.smoothingTimeConstant = 0.7;
 window.analyser.minDecibels = -160;
 window.analyser.maxDecibels = -35;
-window.number = 90;
+window.number = 10;
 window.agregate = 0.0005;
 // draw the analyser to the canvasVis
 /*
@@ -44,8 +44,8 @@ window.freqanalyser = function freqanalyser() {
     window.analyser.getByteFrequencyData(window.data);
   } else {
     for (let b = window.data.length; b > 0; b -= 1) {
-      if (window.number < 90) { window.agregate = 0.0005; }
-      if (window.number > 230) { window.agregate = -0.0005; }
+      if (window.number < 70) { window.agregate = 0.0005; }
+      if (window.number > 220) { window.agregate = -0.0005; }
       if (document.getElementById('audioE')
         .paused === false) { window.number += window.agregate; }
       window.data[b] = window.number;
