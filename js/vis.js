@@ -1,6 +1,7 @@
+if ('AudioContext' in window) {
+  window.supportsAudioContext = true;
+}
 // fix browser vender for AudioContext and requestAnimationFrame
-window.AudioContext = window.AudioContext || window.webkitAudioContext ||
-  window.mozAudioContext || window.msAudioContext;
 window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame ||
   window.mozRequestAnimationFrame || window.msRequestAnimationFrame;
 window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancelAnimationFrame ||
@@ -39,7 +40,7 @@ window.freqanalyser = function freqanalyser() {
     .height, 0, 0);
   window.binSize = Math.floor((window.data.length) / window.numBars);
   window.requestAnimationFrame(window.freqanalyser);
-  if ('AudioContext' in window) {
+  if (window.supportsAudioContext) {
     window.analyser.getByteFrequencyData(window.data);
   } else {
     for (let b = window.data.length; b > 0; b -= 1) {
