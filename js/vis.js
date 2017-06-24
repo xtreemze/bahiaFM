@@ -16,8 +16,8 @@ window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancel
 window.canvasVis = document.getElementById('canvasVisualizer');
 window.canvasVisCtx = window.canvasVis.getContext('2d');
 // Create analyser
-window.AudioContext = window.AudioContext || window.webkitAudioContext;
-window.context = new window.AudioContext();
+window.context = new(window.AudioContext || window.webkitAudioContext)();
+// window.context = new window.AudioContext();
 window.analyser = window.context.createAnalyser();
 window.analyser.fftSize = 256;
 window.analyser.smoothingTimeConstant = 0.7;
