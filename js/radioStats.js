@@ -10,6 +10,7 @@ window.jsonUpdate = () => (fetch(url)
   .then((output) => {
     window.json0 = output;
     window.json1 = output.icestats.source[0];
+    // window.json1 = output.icestats.source;
     window.stats.radioName = window.json1.server_name;
     window.stats.listeners = window.json1.listeners;
     window.stats.listenerPeak = window.json1.listener_peak;

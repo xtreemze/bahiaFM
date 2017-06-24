@@ -3,14 +3,14 @@
   "plugins": ["import"],
   "env": {
     "browser": true,
-    "node": true
+    "es6": true
   },
   "rules": {
     "no-const-assign": "warn",
     "no-this-before-super": "warn",
     "no-undef": "warn",
-    "no-unreachable": "warn",
-    "no-unused-vars": "warn",
+    "no-unreachable": "error",
+    "no-unused-vars": "off",
     "constructor-super": "warn",
     "valid-typeof": "warn",
     "comma-dangle": "warn",
@@ -20,9 +20,11 @@
     "no-plusplus": "warn",
     "max-len": "warn",
     "linebreak-style": "off",
-    "no-console": "off"
+    "no-console": "off",
+    "no-useless-escape": "off",
+    "space-unary-ops": "off"
   },
   "globals": {
-
+    "env": true
   }
 }

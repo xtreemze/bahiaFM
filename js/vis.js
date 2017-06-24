@@ -36,7 +36,7 @@ window.downUp = 0.005;
 ██████  ██   ██ ██   ██  ███ ███
 */
 window.freqanalyser = function freqanalyser() {
-  window.numBars = 92;
+  window.numBars = Math.floor(window.innerWidth / 22);
   window.data = new Uint8Array(92);
   window.gradient = window.canvasVisCtx.createLinearGradient(0, window.canvasVis
     .height, 0, 0);

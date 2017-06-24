@@ -44,7 +44,7 @@
 
 .muelle {
     max-width: 110vw;
-    bottom: -34vh;
+    bottom: -39vh;
     z-index: 10;
     min-height: 48vh;
     max-height: 100vh;
@@ -127,10 +127,12 @@
 
 @media only screen and (min-width: 601px)and (max-width:1123px) {
     .logo {
-        margin: 16vh 14vw 0;
+        margin: 18vh 15% 0;
+        width: 70%;
     }
     .muelle {
-        min-height: 56vh;
+        min-height: 29vh;
+        bottom: -12vh;
         background-size: cover;
     }
     #button1 {
