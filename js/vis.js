@@ -46,7 +46,7 @@ window.freqanalyser = function freqanalyser() {
   } else {
     for (let b = window.data.length; b > 0; b -= 1) {
       if (window.number < 70) { window.agregate = window.upDown; }
-      if (window.number > 220) { window.agregate = window.upDown * -1; }
+      if (window.number > 220) { window.agregate = -window.upDown; }
       if (document.getElementById('audioE')
         .paused === false) { window.number += window.agregate; }
       window.data[b] = window.number;
