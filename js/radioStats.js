@@ -22,8 +22,8 @@ window.jsonUpdate = () => (fetch(url)
       .innerText = `Oyentes: ${window.stats.listeners}`;
   })
   .catch((error) => {
-    window.jsonUpdate();
+    window.stats.title = 'Offline';
     return console.error(error);
   }));
-window.setInterval(() => window.jsonUpdate(), 10000);
+window.setInterval(() => window.jsonUpdate(), 8000);
 window.onload = () => window.jsonUpdate();
