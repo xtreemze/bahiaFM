@@ -1,7 +1,7 @@
 const HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
 const ClosureCompiler = require('google-closure-compiler-js')
   .webpack;
-// const OfflinePlugin = require('offline-plugin');
+const OfflinePlugin = require('offline-plugin');
 //
 module.exports = function prod(env) {
   return {
@@ -56,20 +56,18 @@ module.exports = function prod(env) {
         },
         concurrency: 4,
       }),
-      /*
-            new OfflinePlugin({
-              caches: 'all',
-              responseStrategy: 'network-first',
-              updateStrategy: 'all',
-              minify: 'true',
-              ServiceWorker: {
-                events: 'true',
-              },
-              AppCache: {
-                events: 'true',
-              },
-            }),
-            */
+      new OfflinePlugin({
+        caches: 'all',
+        responseStrategy: 'network-first',
+        updateStrategy: 'all',
+        minify: 'true',
+        ServiceWorker: {
+          events: 'true',
+        },
+        AppCache: {
+          events: 'true',
+        },
+      }),
     ],
   };
 };
