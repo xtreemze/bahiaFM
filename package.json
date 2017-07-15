@@ -35,7 +35,7 @@
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-config-airbnb-base": "^11.2.0",
-    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
     "extract-loader": "^0.1.0",
@@ -43,10 +43,10 @@
     "google-closure-compiler-js": "^20170521.0.0",
     "html-loader": "^0.4.5",
     "html-minifier-webpack-plugin": "^1.0.1",
-    "offline-plugin": "^4.8.1",
+    "offline-plugin": "^4.8.3",
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.9",
-    "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.5.0"
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.5.1"
   }
 }
