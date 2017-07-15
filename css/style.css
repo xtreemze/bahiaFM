@@ -42,6 +42,8 @@
     background-repeat: no-repeat;
 }
 
+
+/* 
 .muelle {
     max-width: 110vw;
     bottom: -39vh;
@@ -52,7 +54,7 @@
     left: -3vw;
     background-image: url("img/muelle.svg");
     background-repeat: no-repeat;
-}
+} */
 
 .playing {
     background-image: url("img/play.svg");
