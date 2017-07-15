@@ -15,18 +15,18 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "b281abd02cd8f51ce5aaf9a5a38dd2916e0d0c40": "./",
+    "427863341867eaaedb22e2e45feebe79b1738a39": "./",
     "1b6b825ea2bebb98575e741d3b0ffaa172c24167": "./css/img/birds.svg",
     "a77d52d67efdac8a6d279c26a4cc4b22e3a79520": "./css/img/muelle.svg",
     "aa721359d10819b9a931c1ff9072fe192c7380b7": "./css/img/play.svg",
     "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./css/img/pause.svg",
     "0e8292b8c6663108c6461aa43d7026db332cf91f": "./css/img/refresh.svg",
-    "d5f529b5544f7dcc5a3aa9262ea17d3cd3ca8816": "./css/img/bahia.svg",
-    "e059147b00e0fd674dd9b7536e79d7ed4a7aa8fe": "./bundle.js"
+    "793eac2bfd16ca3731e29ebf5478d37451039c82": "./css/img/bahia.svg",
+    "2621007ba2b7f212b90749ffc535f85b8239b1a6": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-6-29 16:24:10",
+  "version": "2017-7-15 19:20:48",
   "name": "webpack-offline",
   "pluginVersion": "4.8.1",
   "relativePaths": true

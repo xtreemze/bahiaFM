@@ -59,9 +59,13 @@ window.freqanalyser = function freqanalyser() {
   // clear canvasVis
   window.canvasVisCtx.clearRect(0, 0, window.canvasVis.width, window.canvasVis
     .height);
-  window.gradient.addColorStop(0.98, '#FFCB05');
-  window.gradient.addColorStop(0.3, '#00aeef');
-  window.gradient.addColorStop(0.1, '#FFCB05');
+  // window.gradient.addColorStop(0.98, '#FFCB05');
+  // window.gradient.addColorStop(0.3, '#00aeef');
+  // window.gradient.addColorStop(0.1, '#FFCB05');
+  // window.gradient.addColorStop(0.99, '#FFf');
+  window.gradient.addColorStop(0.99, '#00aeef');
+  // window.gradient.addColorStop(0.1, '#00aeef');
+  window.gradient.addColorStop(0.1, '#fff');
   window.canvasVisCtx.fillStyle = window.gradient;
   // DRAW Individual Bars
   for (let i = 0; i < window.numBars; i += 1) {
