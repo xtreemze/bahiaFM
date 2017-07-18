@@ -26,8 +26,8 @@ window.analyser.minDecibels = -160;
 window.analyser.maxDecibels = -35;
 window.number = 45;
 window.agregate = 0.005;
-window.upDown = -0.005;
-window.downUp = 0.005;
+window.upDown = -window.agregate;
+window.downUp = window.agregate;
 // draw the analyser to the canvasVis
 /*
 ██████  ██████   █████  ██     ██
@@ -58,7 +58,7 @@ window.freqanalyser = function freqanalyser() {
     for (let b = window.data.length; b > -1; b -= 1) {
       if (window.number < 70) { window.agregate = window.downUp; }
       if (window.number > 220) { window.agregate = window.upDown; }
-      if (!document.getElementById('audioE')
+      if (document.getElementById('audioE')
         .paused === false) { window.number += window.agregate; }
       window.data[b] = window.number;
     }
