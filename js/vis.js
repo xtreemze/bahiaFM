@@ -1,3 +1,4 @@
+const test = false;
 if ('AudioContext' in window) {
   window.supportsAudioContext = true;
 }
@@ -36,7 +37,7 @@ window.downUp = 0.005;
 ██████  ██   ██ ██   ██  ███ ███
 */
 window.freqanalyser = function freqanalyser() {
-  window.numBars = Math.floor(window.innerWidth / 22);
+  window.numBars = Math.floor(window.innerWidth / 24);
   window.data = new Uint8Array(92);
   window.gradient = window.canvasVisCtx.createLinearGradient(0, window.canvasVis
     .height, 0, 0);
@@ -45,13 +46,23 @@ window.freqanalyser = function freqanalyser() {
   if (window.supportsAudioContext) {
     window.analyser.getByteFrequencyData(window.data);
   } else {
-    for (let b = window.data.length; b > 0; b -= 1) {
+    for (let b = window.data.length; b > -1; b -= 1) {
       if (window.number < 70) { window.agregate = window.downUp; }
       if (window.number > 220) { window.agregate = window.upDown; }
-      if (document.getElementById('audioE')
+      if (!document.getElementById('audioE')
         .paused === false) { window.number += window.agregate; }
       window.data[b] = window.number;
     }
+  }
+  if (test) {
+    for (let b = window.data.length; b > -1; b -= 1) {
+      if (window.number < 70) { window.agregate = window.downUp; }
+      if (window.number > 220) { window.agregate = window.upDown; }
+      if (!document.getElementById('audioE')
+        .paused === false) { window.number += window.agregate; }
+      window.data[b] = window.number;
+    }
+    window.number += window.agregate;
   }
   // if (!window.analyser) {
   //   window.canvasVis.html(window.data[0]);
@@ -63,9 +74,12 @@ window.freqanalyser = function freqanalyser() {
   // window.gradient.addColorStop(0.3, '#00aeef');
   // window.gradient.addColorStop(0.1, '#FFCB05');
   // window.gradient.addColorStop(0.99, '#FFf');
-  window.gradient.addColorStop(0.99, '#00aeef');
+  window.gradient.addColorStop(0.99, '#fff');
   // window.gradient.addColorStop(0.1, '#00aeef');
-  window.gradient.addColorStop(0.1, '#fff');
+  window.gradient.addColorStop(0.1, '#555');
+  window.gradient.addColorStop(0.0999999, '#fff');
+  window.gradient.addColorStop(0.0002, '#fff');
+  // window.gradient.addColorStop(0.01, '#fff');
   window.canvasVisCtx.fillStyle = window.gradient;
   // DRAW Individual Bars
   for (let i = 0; i < window.numBars; i += 1) {
@@ -76,8 +90,8 @@ window.freqanalyser = function freqanalyser() {
     window.average = window.sum / window.binSize;
     window.barWidth = window.canvasVis.width / window.numBars;
     window.scaledAverage = (window.average / 256) * window.canvasVis.height;
-    window.canvasVisCtx.fillRect(i * window.barWidth, window.canvasVis.height,
-      window.barWidth / 1.2, -window.scaledAverage);
+    window.canvasVisCtx.fillRect(i * window.barWidth, (window.canvasVis
+      .height), window.barWidth / 1.6, -window.scaledAverage);
   }
 };
 // connect audioE to analyser via source1 variable then analyser to Destination
