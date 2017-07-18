@@ -15,7 +15,7 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "785d87af99da8155b255364dff9375cce6ccccb8": "./",
+    "e4291b7bc104854ae6ce84e7692bbef0410a8193": "./",
     "1b6b825ea2bebb98575e741d3b0ffaa172c24167": "./css/img/birds.svg",
     "a77d52d67efdac8a6d279c26a4cc4b22e3a79520": "./css/img/muelle.svg",
     "aa721359d10819b9a931c1ff9072fe192c7380b7": "./css/img/play.svg",
@@ -26,7 +26,7 @@ var __wpo = {
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-7-18 14:06:47",
+  "version": "2017-7-18 14:27:38",
   "name": "webpack-offline",
   "pluginVersion": "4.8.3",
   "relativePaths": true
