@@ -73,12 +73,12 @@ window.freqanalyser = function freqanalyser() {
   // window.gradient.addColorStop(0.3, '#00aeef');
   // window.gradient.addColorStop(0.1, '#FFCB05');
   // window.gradient.addColorStop(0.99, '#FFf');
-  window.gradient.addColorStop(0.99, 'rgba(0, 0, 0, 0.1)');
+  window.gradient.addColorStop(0.99, 'rgba(0, 0, 0, 0.18)');
   // window.gradient.addColorStop(0.1, '#00aeef');
-  window.gradient.addColorStop(0.6, 'rgba(0, 0, 0, 0.17)');
-  window.gradient.addColorStop(0.1, 'rgba(0, 0, 0, 0.13)');
+  window.gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.16)');
+  window.gradient.addColorStop(0.1, 'rgba(0, 0, 0, 0.4)');
   window.gradient.addColorStop(0.0999999, 'rgba(0, 0, 0, 0.0)');
-  window.gradient.addColorStop(0.0002, 'rgba(0, 0, 0, 0.13)');
+  window.gradient.addColorStop(0.0002, 'rgba(0, 0, 0, 0.29)');
   // window.gradient.addColorStop(0.01, '#fff');
   window.canvasVisCtx.fillStyle = window.gradient;
   // DRAW Individual Bars
