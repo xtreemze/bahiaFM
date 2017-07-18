@@ -22,8 +22,8 @@ window.context = new(window.AudioContext || window.webkitAudioContext)();
 window.analyser = window.context.createAnalyser();
 window.analyser.fftSize = 256;
 window.analyser.smoothingTimeConstant = 0.7;
-window.analyser.minDecibels = -160;
-window.analyser.maxDecibels = -35;
+window.analyser.minDecibels = -120;
+window.analyser.maxDecibels = 120;
 window.number = 45;
 window.agregate = 0.005;
 window.upDown = -window.agregate;
@@ -73,12 +73,12 @@ window.freqanalyser = function freqanalyser() {
   // window.gradient.addColorStop(0.3, '#00aeef');
   // window.gradient.addColorStop(0.1, '#FFCB05');
   // window.gradient.addColorStop(0.99, '#FFf');
-  window.gradient.addColorStop(0.99, 'rgba(0, 0, 0, 0.18)');
+  window.gradient.addColorStop(0.99, 'rgba(0, 0, 0, 0.6)');
   // window.gradient.addColorStop(0.1, '#00aeef');
-  window.gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.16)');
-  window.gradient.addColorStop(0.1, 'rgba(0, 0, 0, 0.4)');
+  window.gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.7)');
+  window.gradient.addColorStop(0.1, 'rgba(0, 0, 0, 0.5)');
   window.gradient.addColorStop(0.0999999, 'rgba(0, 0, 0, 0.0)');
-  window.gradient.addColorStop(0.0002, 'rgba(0, 0, 0, 0.29)');
+  window.gradient.addColorStop(0.0002, 'rgba(0, 0, 0, 0.3)');
   // window.gradient.addColorStop(0.01, '#fff');
   window.canvasVisCtx.fillStyle = window.gradient;
   // DRAW Individual Bars

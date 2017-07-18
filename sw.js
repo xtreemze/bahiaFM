@@ -15,18 +15,18 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "036ea15c3d70f3aecbbb6b32a6fb50866c0787b8": "./",
+    "3a64ee40b28bbc245328f4368bdf33bcbfeb8548": "./",
     "1b6b825ea2bebb98575e741d3b0ffaa172c24167": "./css/img/birds.svg",
     "a77d52d67efdac8a6d279c26a4cc4b22e3a79520": "./css/img/muelle.svg",
     "aa721359d10819b9a931c1ff9072fe192c7380b7": "./css/img/play.svg",
     "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./css/img/pause.svg",
     "0e8292b8c6663108c6461aa43d7026db332cf91f": "./css/img/refresh.svg",
     "53cd2a3879d628339e6539cf96bc9b285c7a9a02": "./css/img/bahia.svg",
-    "561ac02b0a01feef955baa91f12b4a6b534a1f92": "./bundle.js"
+    "505c894474911f30e105b36d89412980a34be81a": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-7-18 16:05:37",
+  "version": "2017-7-18 16:44:33",
   "name": "webpack-offline",
   "pluginVersion": "4.8.3",
   "relativePaths": true
