@@ -43,17 +43,6 @@ window.freqanalyser = function freqanalyser() {
     .height, 0, 0);
   window.binSize = Math.floor((window.data.length) / window.numBars);
   window.requestAnimationFrame(window.freqanalyser);
-  if (window.supportsAudioContext) {
-    window.analyser.getByteFrequencyData(window.data);
-  } else {
-    for (let b = window.data.length; b > -1; b -= 1) {
-      if (window.number < 70) { window.agregate = window.downUp; }
-      if (window.number > 220) { window.agregate = window.upDown; }
-      if (!document.getElementById('audioE')
-        .paused === false) { window.number += window.agregate; }
-      window.data[b] = window.number;
-    }
-  }
   if (test) {
     for (let b = window.data.length; b > -1; b -= 1) {
       if (window.number < 70) { window.agregate = window.downUp; }
@@ -63,6 +52,16 @@ window.freqanalyser = function freqanalyser() {
       window.data[b] = window.number;
     }
     window.number += window.agregate;
+  } else if (window.supportsAudioContext) {
+    window.analyser.getByteFrequencyData(window.data);
+  } else {
+    for (let b = window.data.length; b > -1; b -= 1) {
+      if (window.number < 70) { window.agregate = window.downUp; }
+      if (window.number > 220) { window.agregate = window.upDown; }
+      if (!document.getElementById('audioE')
+        .paused === false) { window.number += window.agregate; }
+      window.data[b] = window.number;
+    }
   }
   // if (!window.analyser) {
   //   window.canvasVis.html(window.data[0]);
@@ -74,11 +73,12 @@ window.freqanalyser = function freqanalyser() {
   // window.gradient.addColorStop(0.3, '#00aeef');
   // window.gradient.addColorStop(0.1, '#FFCB05');
   // window.gradient.addColorStop(0.99, '#FFf');
-  window.gradient.addColorStop(0.99, '#fff');
+  window.gradient.addColorStop(0.99, 'rgba(0, 0, 0, 0.1)');
   // window.gradient.addColorStop(0.1, '#00aeef');
-  window.gradient.addColorStop(0.1, '#555');
-  window.gradient.addColorStop(0.0999999, '#fff');
-  window.gradient.addColorStop(0.0002, '#fff');
+  window.gradient.addColorStop(0.6, 'rgba(0, 0, 0, 0.17)');
+  window.gradient.addColorStop(0.1, 'rgba(0, 0, 0, 0.13)');
+  window.gradient.addColorStop(0.0999999, 'rgba(0, 0, 0, 0.0)');
+  window.gradient.addColorStop(0.0002, 'rgba(0, 0, 0, 0.13)');
   // window.gradient.addColorStop(0.01, '#fff');
   window.canvasVisCtx.fillStyle = window.gradient;
   // DRAW Individual Bars
