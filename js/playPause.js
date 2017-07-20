@@ -18,6 +18,7 @@ window.buttonError = function addError() {
   window.offlineTrip = true;
 };
 window.checkPlay = function check() {
+  window.navigator.vibrate(60);
   if (!window.offlineTrip && window.audioElement.paused) {
     window.audioElement.play();
   } else if (!window.offlineTrip) {
