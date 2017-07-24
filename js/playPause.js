@@ -18,7 +18,7 @@ window.buttonError = function addError() {
   window.offlineTrip = true;
 };
 window.checkPlay = function check() {
-  window.navigator.vibrate(10);
+  if (window.navigator.vibrate) window.navigator.vibrate(10);
   if (!window.offlineTrip && window.audioElement.paused) {
     window.audioElement.play();
   } else if (!window.offlineTrip) {
@@ -36,11 +36,11 @@ window.checkPlay = function check() {
 };
 window.scaleDown = function smallButton() {
   window.button.classList.add('scaleDown');
-  window.navigator.vibrate(10);
+  if (window.navigator.vibrate) window.navigator.vibrate(10);
 };
 window.scaleNormal = function regularButton() {
   window.button.classList.remove('scaleDown');
-  window.navigator.vibrate(10);
+  if (window.navigator.vibrate) window.navigator.vibrate(10);
 };
 window.button.addEventListener('click', window.checkPlay, false);
 window.button.addEventListener('mousedown', window.scaleDown, false);

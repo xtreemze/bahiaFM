@@ -18,7 +18,9 @@
     "type": "git",
     "url": "git+https://github.com/xtreemze/bahiaFM.git"
   },
-  "keywords": ["Radio"],
+  "keywords": [
+    "Radio"
+  ],
   "author": "Carlos Velasco",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
