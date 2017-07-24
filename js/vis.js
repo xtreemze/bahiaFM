@@ -16,6 +16,10 @@ window.cancelAnimationFrame = window.cancelAnimationFrame || window.webkitCancel
 */
 window.canvasVis = document.getElementById('canvasVisualizer');
 window.canvasVisCtx = window.canvasVis.getContext('2d');
+window.canvasVisCtx.imageSmoothingEnabled = false;
+window.canvasVisCtx.mozImageSmoothingEnabled = false;
+window.canvasVisCtx.webkitImageSmoothingEnabled = false;
+window.canvasVisCtx.msImageSmoothingEnabled = false;
 // Create analyser
 window.context = new(window.AudioContext || window.webkitAudioContext)();
 // window.context = new window.AudioContext();
