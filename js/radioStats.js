@@ -9,7 +9,17 @@ window.jsonUpdate = () => (fetch(url)
   .then(response => response.json())
   .then((output) => {
     window.json0 = output;
-    window.json1 = output.icestats.source[0];
+    for (let i = 0; i < window.json0.icestats.source.length; i += 1) {
+      if (window.json0.icestats.source[i].listenurl ===
+        'http://192.30.164.78:8000/bahia') {
+        window.json1 = output.icestats.source[i];
+      } else
+      if (!window.json0.icestats.source[i].title === false && window.json0
+        .icestats.source[i].listenurl ===
+        'http://192.30.164.78:8000/bahiaCabina') {
+        window.json1 = output.icestats.source[i];
+      }
+    }
     // window.json1 = output.icestats.source;
     window.stats.radioName = window.json1.server_name;
     window.stats.listeners = window.json1.listeners;
