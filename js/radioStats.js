@@ -18,6 +18,16 @@ window.jsonUpdate = () => (fetch(url)
         .icestats.source[i].listenurl ===
         'http://192.30.164.78:8000/bahia') {
         window.json1 = output.icestats.source[i];
+      } else
+      if (!window.json0.icestats.source.title === false && window.json0
+        .icestats.source.listenurl ===
+        'http://192.30.164.78:8000/bahiaCabina') {
+        window.json1 = output.icestats.source;
+      } else
+      if (!window.json0.icestats.source.title === false && window.json0
+        .icestats.source.listenurl ===
+        'http://192.30.164.78:8000/bahia') {
+        window.json1 = output.icestats.source;
       }
     }
     // window.json1 = output.icestats.source;
