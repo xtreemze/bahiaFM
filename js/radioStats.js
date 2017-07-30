@@ -11,12 +11,12 @@ window.jsonUpdate = () => (fetch(url)
     window.json0 = output;
     for (let i = 0; i < window.json0.icestats.source.length; i += 1) {
       if (window.json0.icestats.source[i].listenurl ===
-        'http://192.30.164.78:8000/bahia') {
+        'http://192.30.164.78:8000/bahiaCabina') {
         window.json1 = output.icestats.source[i];
       } else
       if (!window.json0.icestats.source[i].title === false && window.json0
         .icestats.source[i].listenurl ===
-        'http://192.30.164.78:8000/bahiaCabina') {
+        'http://192.30.164.78:8000/bahia') {
         window.json1 = output.icestats.source[i];
       }
     }
