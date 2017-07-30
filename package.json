@@ -35,7 +35,7 @@
     "css-loader": "^0.26.4",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
-    "eslint-config-airbnb-base": "^11.3.0",
+    "eslint-config-airbnb-base": "^11.3.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.3",
@@ -47,7 +47,7 @@
     "offline-plugin": "^4.8.3",
     "style-loader": "^0.13.2",
     "url-loader": "^0.5.9",
-    "webpack": "^3.3.0",
+    "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
   }
 }

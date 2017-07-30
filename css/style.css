@@ -17,20 +17,20 @@
 
 #statsDiv,
 #listenersDiv {
-    width: 74%;
+    width: 90%;
     margin: 0 auto;
-    height: 4vh;
+    height: 6.7vh;
     font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
     z-index: 100;
     position: relative;
     font-weight: 800;
     text-align: center;
-    font-size: 2.5vh;
+    font-size: 2.2vh;
     text-transform: uppercase;
 }
 
 #listenersDiv {
-    font-size: 1.2vh;
+    font-size: 1.4vh;
     font-weight: 800;
     margin-top: 2vh;
     height: 1vh;
