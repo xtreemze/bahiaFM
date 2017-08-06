@@ -17,7 +17,7 @@ window.jsonUpdate = () => (fetch(url)
       .source.listenurl === 'http://192.30.164.78:8000/bahiaCabina') {
       window.json1 = window.json0.icestats.source;
     } else {
-      for (let i = window.json0.icestats.source.length; i > 0; i += 1) {
+      for (let i = window.json0.icestats.source.length; i > 0; i -= 1) {
         if (window.json0.icestats.source[i].listenurl ===
           'http://192.30.164.78:8000/bahia') {
           window.json1 = window.json0.icestats.source[i];
