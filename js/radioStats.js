@@ -26,7 +26,6 @@ window.jsonUpdate = () =>
         for (let i = 0; i < window.json0.icestats.source.length; i += 1) {
           window.source = window.json0.icestats.source[i];
           if (window.source.listenurl === "http://192.30.164.78:8000/stream") {
-            return null;
           } else if (
             window.source.listenurl === "http://192.30.164.78:8000/bahia" &&
             !window.source.dummy
