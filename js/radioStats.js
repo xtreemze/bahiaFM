@@ -36,7 +36,13 @@ window.jsonUpdate = () =>
             window.json1.title === undefined
           ) {
             window.json1 = window.source;
-          } else {
+          } else if (
+            window.source.listenurl === "http://192.30.164.78:8000/bahia"
+          ) {
+            window.json1 = window.source;
+          } else if (
+            window.source.listenurl === "http://192.30.164.78:8000/bahiaCabina"
+          ) {
             window.json1 = window.source;
           }
         }
