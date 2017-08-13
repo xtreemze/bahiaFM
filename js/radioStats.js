@@ -30,11 +30,18 @@ window.jsonUpdate = () =>
             window.source.listenurl === "http://192.30.164.78:8000/bahia" &&
             !window.source.dummy
           ) {
+            window.live = true;
             window.json1 = window.source;
+          } else if (
+            window.source.listenurl === "http://192.30.164.78:8000/bahia" &&
+            window.source.dummy
+          ) {
+            window.live = false;
           } else if (
             window.source.listenurl ===
               "http://192.30.164.78:8000/bahiaCabina" &&
-            !window.source.dummy
+            !window.source.dummy &&
+            !window.live
           ) {
             window.json1 = window.source;
           } else if (
@@ -42,7 +49,9 @@ window.jsonUpdate = () =>
           ) {
             window.json1 = window.source;
           } else if (
-            window.source.listenurl === "http://192.30.164.78:8000/bahiaCabina"
+            window.source.listenurl ===
+              "http://192.30.164.78:8000/bahiaCabina" &&
+            !window.live
           ) {
             window.json1 = window.source;
           }
