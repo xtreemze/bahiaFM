@@ -22,11 +22,11 @@ var __wpo = {
     "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./css/img/pause.svg",
     "0e8292b8c6663108c6461aa43d7026db332cf91f": "./css/img/refresh.svg",
     "53cd2a3879d628339e6539cf96bc9b285c7a9a02": "./css/img/bahia.svg",
-    "b67f56061cb2b9182fa172a5b436883c2bb41315": "./bundle.js"
+    "86ff84c44f4b5a17898241edef356e5d1d767988": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-8-13 13:08:28",
+  "version": "2017-8-13 13:24:16",
   "name": "webpack-offline",
   "pluginVersion": "4.8.3",
   "relativePaths": true
