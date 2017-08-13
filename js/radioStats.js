@@ -10,17 +10,7 @@ window.jsonUpdate = () =>
     .then(response => response.json())
     .then(output => {
       window.json0 = output;
-      if (
-        !window.json0.icestats.source.length &&
-        window.json0.icestats.source.listenurl ===
-          "http://192.30.164.78:8000/bahia"
-      ) {
-        window.json1 = window.json0.icestats.source;
-      } else if (
-        !window.json0.icestats.source.length &&
-        window.json0.icestats.source.listenurl ===
-          "http://192.30.164.78:8000/bahiaCabina"
-      ) {
+      if (!window.json0.icestats.source.length) {
         window.json1 = window.json0.icestats.source;
       } else {
         for (let i = 0; i < window.json0.icestats.source.length; i += 1) {
@@ -41,16 +31,6 @@ window.jsonUpdate = () =>
             window.source.listenurl ===
               "http://192.30.164.78:8000/bahiaCabina" &&
             !window.source.dummy &&
-            !window.live
-          ) {
-            window.json1 = window.source;
-          } else if (
-            window.source.listenurl === "http://192.30.164.78:8000/bahia"
-          ) {
-            window.json1 = window.source;
-          } else if (
-            window.source.listenurl ===
-              "http://192.30.164.78:8000/bahiaCabina" &&
             !window.live
           ) {
             window.json1 = window.source;
