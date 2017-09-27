@@ -6,7 +6,6 @@ var __wpo = {
       "./css/img/play.svg",
       "./css/img/pause.svg",
       "./css/img/refresh.svg",
-      "./css/img/bahia.svg",
       "./bundle.js"
     ],
     "additional": [],
@@ -14,17 +13,16 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "e69bf788dc175d905410b5087ef516aef8ad7513": "./",
+    "2f64fc5e9dc962dfc8ef227e87d7c418462c8d4a": "./",
     "1b6b825ea2bebb98575e741d3b0ffaa172c24167": "./css/img/birds.svg",
     "aa721359d10819b9a931c1ff9072fe192c7380b7": "./css/img/play.svg",
     "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./css/img/pause.svg",
     "0e8292b8c6663108c6461aa43d7026db332cf91f": "./css/img/refresh.svg",
-    "53cd2a3879d628339e6539cf96bc9b285c7a9a02": "./css/img/bahia.svg",
     "16508a5784db08b1e421a1e19072ac53638acd37": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-9-27 11:01:29",
+  "version": "2017-9-27 11:04:20",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true

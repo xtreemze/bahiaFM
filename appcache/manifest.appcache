@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2017-9-27 11:01:29
+#ver:2017-9-27 11:04:20
 #plugin:4.8.4
 
 CACHE:
@@ -8,7 +8,6 @@ CACHE:
 ../css/img/play.svg
 ../css/img/pause.svg
 ../css/img/refresh.svg
-../css/img/bahia.svg
 ../bundle.js
 
 NETWORK:
