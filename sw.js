@@ -24,7 +24,7 @@ var __wpo = {
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-9-27 10:56:22",
+  "version": "2017-9-27 11:00:36",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true
