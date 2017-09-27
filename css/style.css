@@ -1,52 +1,52 @@
 #visualizer {
-    /* width: 100%;
+  /* width: 100%;
     height: 100%;
     bottom: 0;
     z-index: 8; */
-    width: 100%;
-    height: 50%;
-    bottom: 0;
-    z-index: 8;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  z-index: 8;
 }
 
 #visualizer,
 .birds,
 .muelle {
-    position: fixed;
+  position: fixed;
 }
 
 #statsDiv,
 #listenersDiv {
-    width: 90%;
-    margin: 0 auto;
-    height: 6.7vh;
-    font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
-    z-index: 100;
-    position: relative;
-    font-weight: 800;
-    text-align: center;
-    font-size: 2.2vh;
-    text-transform: uppercase;
+  width: 90%;
+  margin: 0 auto;
+  height: 6.7vh;
+  font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
+  z-index: 100;
+  position: relative;
+  font-weight: 800;
+  text-align: center;
+  font-size: 2.2vh;
+  text-transform: uppercase;
 }
 
 #listenersDiv {
-    font-size: 1.4vh;
-    font-weight: 800;
-    margin-top: 2vh;
-    height: 1vh;
+  font-size: 1.4vh;
+  font-weight: 800;
+  margin-top: 2vh;
+  height: 1vh;
 }
 
 .birds {
-    top: 28px;
-    right: 36px;
-    height: 12vh;
-    min-width: 84px;
-    width: 25vw;
-    background-image: url("img/birds.svg");
-    background-repeat: no-repeat;
+  top: 28px;
+  right: 36px;
+  height: 12vh;
+  min-width: 84px;
+  width: 25vw;
+  background-image: url("img/birds.svg");
+  background-repeat: no-repeat;
 }
 
-.muelle {
+/* .muelle {
     max-width: 110vw;
     bottom: -39vh;
     z-index: 10;
@@ -56,69 +56,69 @@
     left: -3vw;
     background-image: url("img/muelle.svg");
     background-repeat: no-repeat;
-}
+} */
 
 .playing {
-    background-image: url("img/play.svg");
+  background-image: url("img/play.svg");
 }
 
 .paused {
-    background-image: url("img/pause.svg");
+  background-image: url("img/pause.svg");
 }
 
 .error {
-    background-image: url("img/refresh.svg");
+  background-image: url("img/refresh.svg");
 }
 
 #button1 {
-    height: 52vw;
-    width: 52vw;
-    min-width: 48px;
-    margin: 0 auto;
-    position: relative;
-    background-size: cover;
-    z-index: 25;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    background-color: rgba(255, 203, 5, 0);
-    border: 0;
-    color: rgba(255, 203, 5, 0);
-    padding: 0;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    -webkit-highlight: none;
-    -webkit-tap-highlight-color: rgba(255, 203, 5, 0);
-    -webkit-transition: 72ms;
-    transition: 72ms;
+  height: 52vw;
+  width: 52vw;
+  min-width: 48px;
+  margin: 0 auto;
+  position: relative;
+  background-size: cover;
+  z-index: 25;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-color: rgba(255, 203, 5, 0);
+  border: 0;
+  color: rgba(255, 203, 5, 0);
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  -webkit-highlight: none;
+  -webkit-tap-highlight-color: rgba(255, 203, 5, 0);
+  -webkit-transition: 72ms;
+  transition: 72ms;
 }
 
 .scaleDown {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 ::-moz-selection {
-    background: rgba(255, 203, 5, 0);
+  background: rgba(255, 203, 5, 0);
 }
 
 ::selection {
-    background: rgba(255, 203, 5, 0);
+  background: rgba(255, 203, 5, 0);
 }
 
-@media only screen and (min-width: 1124px) and (max-width:1440px) {
-    .logo {
-        width: 62vw;
-        max-width: 90vh;
-        margin: 28vh 19vw 0;
-    }
-    #button1 {
-        height: 18vw;
-        width: 18vw;
-        min-width: 48px;
-        margin: 0 auto;
-    }
-    .muelle {
+@media only screen and (min-width: 1124px) and (max-width: 1440px) {
+  .logo {
+    width: 62vw;
+    max-width: 90vh;
+    margin: 28vh 19vw 0;
+  }
+  #button1 {
+    height: 18vw;
+    width: 18vw;
+    min-width: 48px;
+    margin: 0 auto;
+  }
+  /* .muelle {
         max-width: 110vw;
         bottom: -21vh;
         min-height: 42vh;
@@ -126,28 +126,28 @@
         min-width: 104vw;
         left: -3vw;
         background-size: cover;
-    }
+    } */
 }
 
-@media only screen and (min-width: 601px)and (max-width:1123px) {
-    .logo {
-        margin: 18vh 15% 0;
-        width: 70%;
-    }
-    .muelle {
+@media only screen and (min-width: 601px) and (max-width: 1123px) {
+  .logo {
+    margin: 18vh 15% 0;
+    width: 70%;
+  }
+  /* .muelle {
         min-height: 29vh;
         bottom: -12vh;
         background-size: cover;
-    }
-    #button1 {
-        height: 34vh;
-        width: 34vh;
-        margin: 0 auto;
-    }
+    } */
+  #button1 {
+    height: 34vh;
+    width: 34vh;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (min-width: 1441px) {
-    .muelle {
+  /* .muelle {
         max-width: 110vw;
         bottom: -21vh;
         min-height: 45vh;
@@ -155,38 +155,38 @@
         min-width: 104vw;
         left: -4vw;
         background-size: cover;
-    }
-    .logo {
-        width: 30vw;
-        max-width: 90vh;
-        margin: 12vh 14vw 0;
-    }
-    #button1 {
-        height: 20vw;
-        width: 20vw;
-        min-width: 48px;
-        margin: 0 auto;
-    }
+    } */
+  .logo {
+    width: 30vw;
+    max-width: 90vh;
+    margin: 12vh 14vw 0;
+  }
+  #button1 {
+    height: 20vw;
+    width: 20vw;
+    min-width: 48px;
+    margin: 0 auto;
+  }
 }
 
-@media only screen and (min-height: 20px)and (max-height:400px) {
-    #button1 {
-        height: 42vh;
-        width: 42vh;
-        margin: 22vh 5vw 0;
-        top: 0;
-        position: absolute;
-        right: 0;
-    }
-    .logo {
-        width: 42vw;
-        max-width: 90vh;
-        margin: 38vh 9vw 0;
-        float: left;
-    }
-    .muelle {
+@media only screen and (min-height: 20px) and (max-height: 400px) {
+  #button1 {
+    height: 42vh;
+    width: 42vh;
+    margin: 22vh 5vw 0;
+    top: 0;
+    position: absolute;
+    right: 0;
+  }
+  .logo {
+    width: 42vw;
+    max-width: 90vh;
+    margin: 38vh 9vw 0;
+    float: left;
+  }
+  /* .muelle {
         max-height: 200vh;
         min-height: 72vh;
         bottom: -40vh;
-    }
+    } */
 }

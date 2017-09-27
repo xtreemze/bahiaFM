@@ -1,6 +1,7 @@
 {
   "name": "BahiaFM",
   "short_name": "BahiaFM",
+  "start_url": "./",
   "icons": [
     {
       "src": "http://bahiahn.com/android-chrome-192x192.png",

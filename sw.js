@@ -3,7 +3,6 @@ var __wpo = {
     "main": [
       "./",
       "./css/img/birds.svg",
-      "./css/img/muelle.svg",
       "./css/img/play.svg",
       "./css/img/pause.svg",
       "./css/img/refresh.svg",
@@ -17,16 +16,15 @@ var __wpo = {
   "hashesMap": {
     "3ca30c2554b4b6c84dfda8dcd9cbced5bda2b2d3": "./",
     "1b6b825ea2bebb98575e741d3b0ffaa172c24167": "./css/img/birds.svg",
-    "a77d52d67efdac8a6d279c26a4cc4b22e3a79520": "./css/img/muelle.svg",
     "aa721359d10819b9a931c1ff9072fe192c7380b7": "./css/img/play.svg",
     "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./css/img/pause.svg",
     "0e8292b8c6663108c6461aa43d7026db332cf91f": "./css/img/refresh.svg",
     "53cd2a3879d628339e6539cf96bc9b285c7a9a02": "./css/img/bahia.svg",
-    "01653c80e885bafce7c18a849839ef66e7db5f8d": "./bundle.js"
+    "16508a5784db08b1e421a1e19072ac53638acd37": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-9-27 10:47:16",
+  "version": "2017-9-27 10:56:22",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true
