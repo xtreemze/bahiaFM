@@ -6,7 +6,7 @@ const OfflinePlugin = require("offline-plugin");
 const HtmlMinifierPlugin = require("html-minifier-webpack-plugin");
 const ClosureCompiler = require("google-closure-compiler-js").webpack;
 // const path = require("path");
-// const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 // const glob = require("glob-all");
 
 //
@@ -38,11 +38,7 @@ module.exports = function prod(env) {
         },
         {
           test: /\.css$/,
-          use: [
-            // "style-loader",
-            //  "css-loader",
-            "postcss-loader"
-          ]
+          use: ["style-loader", "css-loader", "postcss-loader"]
         },
         {
           test: /\.(gif|png|jpe?g|svg)$/i,

@@ -2,9 +2,9 @@ var __wpo = {
   "assets": {
     "main": [
       "./",
-      "./build/twitter.svg",
-      "./build/instagram.svg",
       "./build/facebook.svg",
+      "./build/instagram.svg",
+      "./build/twitter.svg",
       "./build/bahia.svg",
       "./bundle.js"
     ],
@@ -13,16 +13,16 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "aec2a63c0b6b607cc86795d4bfeba7cea747bea1": "./",
-    "52b275ad9b7d1e1b0c4f664ee301225743229d40": "./build/twitter.svg",
-    "c5f199a0d21e3661eb7e7bc27f07dd5bfa21fd83": "./build/instagram.svg",
+    "d8c10be69a60bf424ccda2f70f546363cd438364": "./",
     "5e68f1c671f223a5708e7b875911aa6e15d73443": "./build/facebook.svg",
+    "c5f199a0d21e3661eb7e7bc27f07dd5bfa21fd83": "./build/instagram.svg",
+    "52b275ad9b7d1e1b0c4f664ee301225743229d40": "./build/twitter.svg",
     "08a3dd689c36cb986b8e710092ad255febe73691": "./build/bahia.svg",
-    "6dd09ffbf7d98689fa53accfef57d385c2cfe3c1": "./bundle.js"
+    "c37adc29d4be12121f3b0ab3465478f7e7cd8698": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-11-4 17:01:28",
+  "version": "2017-11-4 17:15:18",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true

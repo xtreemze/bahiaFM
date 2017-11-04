@@ -1,12 +1,12 @@
 CACHE MANIFEST
-#ver:2017-11-4 17:01:28
+#ver:2017-11-4 17:15:18
 #plugin:4.8.4
 
 CACHE:
 ../
-../build/twitter.svg
-../build/instagram.svg
 ../build/facebook.svg
+../build/instagram.svg
+../build/twitter.svg
 ../build/bahia.svg
 ../bundle.js
 
