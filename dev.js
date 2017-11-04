@@ -5,10 +5,15 @@ module.exports = function dev(env) {
       path: __dirname,
       filename: "bundle.js"
     },
-    // stats: {
-    //   warnings: false
-    // },
-    devtool: "cheap-module-eval-source-map",
+    stats: {
+      warnings: false
+    },
+    resolve: {
+      alias: {
+        webworkify: "webworkify-webpack-dropin"
+      }
+    },
+    devtool: "cheap-module-source-map",
     module: {
       rules: [
         {
@@ -21,24 +26,42 @@ module.exports = function dev(env) {
         },
         {
           test: /\.css$/,
-          use: ["style-loader", "css-loader"]
+          use: [
+            // "style-loader",
+            // "css-loader",
+            "postcss-loader"
+          ]
         },
         {
-          test: /\.svg$/,
-          use: [
+          test: /\.(gif|png|jpe?g|svg)$/i,
+          loaders: [
+            "file-loader?name=build/[name].[ext]",
             {
-              loader: "file-loader?name=[path][name].[ext]"
+              loader: "image-webpack-loader",
+              options: {}
             }
           ]
         },
+        {
+          test: /\.(eot|ttf|woff|woff2)$/,
+          loader: "file-loader?name=[path][name].[ext]"
+        },
+        // {
+        //   test: /\.svg$/,
+        //   use: [
+        //     {
+        //       loader: "file-loader?name=build/[name].[ext]"
+        //     }
+        //   ]
+        // },
         {
           test: /\.js$/,
           exclude: [/node_modules/],
           use: [
             {
-              loader: "babel-loader",
+              loader: "babel-loader?cacheDirectory",
               options: {
-                presets: [["env", { modules: false }]]
+                presets: [["@babel/preset-env", { modules: false }]]
               }
             }
           ]

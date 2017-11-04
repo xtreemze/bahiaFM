@@ -1,8 +1,4 @@
 #visualizer {
-  /* width: 100%;
-    height: 100%;
-    bottom: 0;
-    z-index: 8; */
   width: 100%;
   height: 50%;
   bottom: 0;
@@ -26,7 +22,7 @@
   font-weight: 800;
   text-align: center;
   font-size: 2.2vh;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 #listenersDiv {
@@ -45,18 +41,6 @@
   background-image: url("img/birds.svg");
   background-repeat: no-repeat;
 }
-
-/* .muelle {
-    max-width: 110vw;
-    bottom: -39vh;
-    z-index: 10;
-    min-height: 48vh;
-    max-height: 100vh;
-    min-width: 104vw;
-    left: -3vw;
-    background-image: url("img/muelle.svg");
-    background-repeat: no-repeat;
-} */
 
 .playing {
   background-image: url("img/play.svg");
@@ -118,15 +102,6 @@
     min-width: 48px;
     margin: 0 auto;
   }
-  /* .muelle {
-        max-width: 110vw;
-        bottom: -21vh;
-        min-height: 42vh;
-        max-height: 70vh;
-        min-width: 104vw;
-        left: -3vw;
-        background-size: cover;
-    } */
 }
 
 @media only screen and (min-width: 601px) and (max-width: 1123px) {
@@ -184,9 +159,4 @@
     margin: 38vh 9vw 0;
     float: left;
   }
-  /* .muelle {
-        max-height: 200vh;
-        min-height: 72vh;
-        bottom: -40vh;
-    } */
 }

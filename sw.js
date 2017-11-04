@@ -2,14 +2,10 @@ var __wpo = {
   "assets": {
     "main": [
       "./",
-      "./css/img/birds.svg",
-      "./css/img/play.svg",
-      "./css/img/pause.svg",
-      "./css/img/refresh.svg",
-      "./img/instagram.svg",
-      "./img/twitter.svg",
-      "./css/img/bahia.svg",
-      "./img/facebook.svg",
+      "./build/twitter.svg",
+      "./build/instagram.svg",
+      "./build/facebook.svg",
+      "./build/bahia.svg",
       "./bundle.js"
     ],
     "additional": [],
@@ -17,20 +13,16 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "74adf0a49d07453aa98c366d128ba5f25def8fbf": "./",
-    "1b6b825ea2bebb98575e741d3b0ffaa172c24167": "./css/img/birds.svg",
-    "aa721359d10819b9a931c1ff9072fe192c7380b7": "./css/img/play.svg",
-    "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./css/img/pause.svg",
-    "0e8292b8c6663108c6461aa43d7026db332cf91f": "./css/img/refresh.svg",
-    "6e69c7a1599b584944c4c0e8fb607226b2cb0fef": "./img/instagram.svg",
-    "81114721588419cc427b1eadc0f60cb9431c16ba": "./img/twitter.svg",
-    "53cd2a3879d628339e6539cf96bc9b285c7a9a02": "./css/img/bahia.svg",
-    "89de8f904455920f754ad3b2fafc872d25024930": "./img/facebook.svg",
-    "16508a5784db08b1e421a1e19072ac53638acd37": "./bundle.js"
+    "aec2a63c0b6b607cc86795d4bfeba7cea747bea1": "./",
+    "52b275ad9b7d1e1b0c4f664ee301225743229d40": "./build/twitter.svg",
+    "c5f199a0d21e3661eb7e7bc27f07dd5bfa21fd83": "./build/instagram.svg",
+    "5e68f1c671f223a5708e7b875911aa6e15d73443": "./build/facebook.svg",
+    "08a3dd689c36cb986b8e710092ad255febe73691": "./build/bahia.svg",
+    "6dd09ffbf7d98689fa53accfef57d385c2cfe3c1": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-10-17 15:40:01",
+  "version": "2017-11-4 17:01:28",
   "name": "webpack-offline",
   "pluginVersion": "4.8.4",
   "relativePaths": true
@@ -39,10 +31,10 @@ var __wpo = {
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
-/******/
+
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
-/******/
+
 /******/ 		// Check if module is in cache
 /******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
@@ -53,24 +45,24 @@ var __wpo = {
 /******/ 			l: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/
+
 /******/ 		// Execute the module function
 /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+
 /******/ 		// Flag the module as loaded
 /******/ 		module.l = true;
-/******/
+
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
-/******/
+
+
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = modules;
-/******/
+
 /******/ 	// expose the module cache
 /******/ 	__webpack_require__.c = installedModules;
-/******/
+
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
@@ -81,7 +73,7 @@ var __wpo = {
 /******/ 			});
 /******/ 		}
 /******/ 	};
-/******/
+
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
 /******/ 	__webpack_require__.n = function(module) {
 /******/ 		var getter = module && module.__esModule ?
@@ -90,13 +82,13 @@ var __wpo = {
 /******/ 		__webpack_require__.d(getter, 'a', getter);
 /******/ 		return getter;
 /******/ 	};
-/******/
+
 /******/ 	// Object.prototype.hasOwnProperty.call
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
+
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
-/******/
+
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
