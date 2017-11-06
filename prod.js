@@ -20,11 +20,6 @@ module.exports = function prod(env) {
     stats: {
       warnings: false
     },
-    resolve: {
-      alias: {
-        webworkify: "webworkify-webpack-dropin"
-      }
-    },
     devtool: "cheap-source-map",
     module: {
       rules: [
@@ -71,7 +66,7 @@ module.exports = function prod(env) {
         },
         {
           test: /\.(eot|ttf|woff|woff2)$/,
-          loader: "file-loader?name=[path][name].[ext]"
+          loader: "file-loader?name=build/[name].[ext]"
         },
         {
           test: /\.js$/,
@@ -80,7 +75,7 @@ module.exports = function prod(env) {
             {
               loader: "babel-loader?cacheDirectory",
               options: {
-                presets: [["@babel/preset-env", { modules: false }]]
+                presets: [["env", { modules: false }]]
               }
             }
           ]

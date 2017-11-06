@@ -5,18 +5,12 @@
   "main": "index.html",
   "scripts": {
     "test": "none",
-    "dev":
-      "webpack-dev-server --host localhost --env=dev --inline --hot --profile --open",
-    "debugHot":
-      "webpack-dev-server --host localhost --port 8080 --env=dev --inline --hot --profile",
-    "debug":
-      "webpack-dev-server --host localhost --port 8080 --env=dev --profile",
-    "net":
-      "webpack-dev-server --public --host 192.168.0.170 --port 80 --env=dev --profile --open",
-    "net2":
-      "webpack-dev-server --public --host 192.168.0.117 --port 80 --env=dev --profile",
-    "devHTML":
-      "webpack-dev-server --progress --colors --host localhost --port 8080 --env=dev --profile --open",
+    "dev": "webpack-dev-server --host localhost --env=dev --inline --hot --profile --open",
+    "debugHot": "webpack-dev-server --host localhost --port 8080 --env=dev --inline --hot --profile",
+    "debug": "webpack-dev-server --host localhost --port 8080 --env=dev --profile",
+    "net": "webpack-dev-server --public --host 192.168.0.170 --port 80 --env=dev --profile --open",
+    "net2": "webpack-dev-server --public --host 192.168.0.117 --port 80 --env=dev --profile",
+    "devHTML": "webpack-dev-server --progress --colors --host localhost --port 8080 --env=dev --profile --open",
     "watch": "webpack --progress --colors --env=dev --profile --watch",
     "exportp": "webpack --env=prod --profile"
   },
@@ -24,19 +18,27 @@
     "type": "git",
     "url": "git+https://github.com/xtreemze/bahiaFM.git"
   },
-  "keywords": ["Radio"],
+  "keywords": [
+    "Radio"
+  ],
   "author": "Carlos Velasco",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/xtreemze/bahiaFM/issues"
   },
   "homepage": "https://github.com/xtreemze/bahiaFM#readme",
-  "browserslist": ["> 1%", "last 2 versions"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.31",
-    "@babel/preset-env": "^7.0.0-beta.31",
+    "offline-plugin": "^4.8.4"
+  },
+  "devDependencies": {
     "autoprefixer": "^7.1.6",
-    "babel-loader": "^8.0.0-beta.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
     "browserslist": "^2.7.0",
     "css-loader": "^0.28.7",
     "extract-loader": "^1.0.1",
@@ -46,15 +48,10 @@
     "html-loader": "^0.5.1",
     "html-minifier-webpack-plugin": "^1.1.1",
     "image-webpack-loader": "^3.4.2",
-    "offline-plugin": "^4.8.4",
+    "postcss-loader": "^2.0.8",
     "style-loader": "^0.19.0",
     "url-loader": "^0.6.2",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
-  },
-  "devDependencies": {
-    "postcss-loader": "^2.0.8",
-    "webworkify": "^1.4.0",
-    "webworkify-webpack-dropin": "^1.1.9"
   }
 }

@@ -1,13 +1,17 @@
 CACHE MANIFEST
-#ver:2017-11-4 17:15:18
+#ver:2017-11-6 12:31:04
 #plugin:4.8.4
 
 CACHE:
 ../
-../build/facebook.svg
+../build/birds.svg
+../build/play.svg
+../build/pause.svg
+../build/refresh.svg
 ../build/instagram.svg
-../build/twitter.svg
 ../build/bahia.svg
+../build/twitter.svg
+../build/facebook.svg
 ../bundle.js
 
 NETWORK:
