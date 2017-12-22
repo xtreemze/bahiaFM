@@ -6,10 +6,10 @@ var __wpo = {
       "./build/play.svg",
       "./build/pause.svg",
       "./build/refresh.svg",
-      "./build/facebook.svg",
-      "./build/twitter.svg",
       "./build/instagram.svg",
       "./build/bahia.svg",
+      "./build/twitter.svg",
+      "./build/facebook.svg",
       "./bundle.js"
     ],
     "additional": [],
@@ -22,17 +22,17 @@ var __wpo = {
     "aa721359d10819b9a931c1ff9072fe192c7380b7": "./build/play.svg",
     "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./build/pause.svg",
     "0e8292b8c6663108c6461aa43d7026db332cf91f": "./build/refresh.svg",
-    "5e68f1c671f223a5708e7b875911aa6e15d73443": "./build/facebook.svg",
-    "52b275ad9b7d1e1b0c4f664ee301225743229d40": "./build/twitter.svg",
     "c5f199a0d21e3661eb7e7bc27f07dd5bfa21fd83": "./build/instagram.svg",
     "08a3dd689c36cb986b8e710092ad255febe73691": "./build/bahia.svg",
-    "79a5e45362e14e5119d272e9f937ac85051fea8e": "./bundle.js"
+    "52b275ad9b7d1e1b0c4f664ee301225743229d40": "./build/twitter.svg",
+    "5e68f1c671f223a5708e7b875911aa6e15d73443": "./build/facebook.svg",
+    "a226514544e6e409af251e0c388e8eee37598f25": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2017-12-22 16:53:45",
+  "version": "2017-12-22 16:58:57",
   "name": "webpack-offline",
-  "pluginVersion": "4.8.4",
+  "pluginVersion": "4.8.5",
   "relativePaths": true
 };
 
