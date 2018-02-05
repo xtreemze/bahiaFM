@@ -17,7 +17,7 @@ OfflinePluginRuntime.install({
     h1Title.innerText = "Reiniciando";
     setTimeout(function() {
       window.location.reload();
-    }, 10000);
+    }, 1000);
   }
 });
 
@@ -76,10 +76,18 @@ window.button.addEventListener("touchstart", window.scaleDown, {
 });
 window.button.addEventListener("mouseup", window.scaleNormal, false);
 window.button.addEventListener("touchend", window.scaleNormal, false);
-window.audioElement.addEventListener("stalled", window.buttonError, false);
+window.audioElement.addEventListener(
+  "stalled",
+  window.buttonError,
+  false
+);
 window.audioElement.addEventListener("paused", window.buttonPlay, false);
 window.audioElement.addEventListener("error", window.buttonError, false);
 window.audioElement.addEventListener("abort", window.buttonError, false);
-window.audioElement.addEventListener("playing", window.buttonPause, false);
+window.audioElement.addEventListener(
+  "playing",
+  window.buttonPause,
+  false
+);
 window.button.className = "error";
 window.audioElement.play();
