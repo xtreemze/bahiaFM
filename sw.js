@@ -6,9 +6,9 @@ var __wpo = {
       "./build/play.svg",
       "./build/pause.svg",
       "./build/refresh.svg",
-      "./build/instagram.svg",
-      "./build/twitter.svg",
       "./build/bahia.svg",
+      "./build/twitter.svg",
+      "./build/instagram.svg",
       "./build/facebook.svg",
       "./bundle.js"
     ],
@@ -17,20 +17,20 @@ var __wpo = {
   },
   "externals": [],
   "hashesMap": {
-    "34ffd1b6b4b5ade157e9b7b89e4cd5e21285fe31": "./",
+    "3ec4a2ce09d8b8e1a3e367137d7bc64889f5c721": "./",
     "f952fe6a036f48281fc011417912d6be4f0e4ab4": "./build/birds.svg",
     "aa721359d10819b9a931c1ff9072fe192c7380b7": "./build/play.svg",
     "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./build/pause.svg",
     "0e8292b8c6663108c6461aa43d7026db332cf91f": "./build/refresh.svg",
-    "c5f199a0d21e3661eb7e7bc27f07dd5bfa21fd83": "./build/instagram.svg",
-    "52b275ad9b7d1e1b0c4f664ee301225743229d40": "./build/twitter.svg",
     "08a3dd689c36cb986b8e710092ad255febe73691": "./build/bahia.svg",
+    "52b275ad9b7d1e1b0c4f664ee301225743229d40": "./build/twitter.svg",
+    "c5f199a0d21e3661eb7e7bc27f07dd5bfa21fd83": "./build/instagram.svg",
     "5e68f1c671f223a5708e7b875911aa6e15d73443": "./build/facebook.svg",
-    "62d9e91bf8841a4a13588de68267833816d284da": "./bundle.js"
+    "becfef670ebfe3177f92c85e36e4edb0fffc5980": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2018-3-2 15:30:58",
+  "version": "2018-3-2 15:41:34",
   "name": "webpack-offline",
   "pluginVersion": "4.9.0",
   "relativePaths": true
