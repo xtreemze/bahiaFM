@@ -90,4 +90,13 @@ window.audioElement.addEventListener(
   false
 );
 window.button.className = "error";
-window.audioElement.play();
+
+window.audioElement.muted = true;
+
+setTimeout(() => {
+ window.audioElement.play(); 
+  setTimeout(() => {
+ window.audioElement.muted = false;
+}, 500);
+}, 300);
+
