@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2018-3-2 15:41:34
+#ver:2018-5-18 08:42:08
 #plugin:4.9.0
 
 CACHE:
@@ -8,9 +8,9 @@ CACHE:
 ../build/play.svg
 ../build/pause.svg
 ../build/refresh.svg
-../build/bahia.svg
 ../build/twitter.svg
 ../build/instagram.svg
+../build/bahia.svg
 ../build/facebook.svg
 ../bundle.js
 

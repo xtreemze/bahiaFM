@@ -1,3 +1,5 @@
+import visualizer from "./vis";
+
 import * as OfflinePluginRuntime from "offline-plugin/runtime";
 // OfflinePluginRuntime.install();
 
@@ -29,6 +31,12 @@ window.audioElement = document.getElementById("audioE");
 window.button = document.getElementById("button1");
 window.audioElement.src = window.radioString;
 window.audioElement.crossOrigin = "anonymous";
+
+function startVis() {
+  window.button.removeEventListener("click", startVis, false);
+  visualizer();
+}
+
 window.buttonPlay = function addPlaying() {
   window.button.className = "playing";
   window.offlineTrip = false;
@@ -70,33 +78,17 @@ window.scaleNormal = function regularButton() {
   if (window.navigator.vibrate) window.navigator.vibrate(10);
 };
 window.button.addEventListener("click", window.checkPlay, false);
+window.button.addEventListener("click", startVis, false);
+
 window.button.addEventListener("mousedown", window.scaleDown, false);
 window.button.addEventListener("touchstart", window.scaleDown, {
   passive: true
 });
 window.button.addEventListener("mouseup", window.scaleNormal, false);
 window.button.addEventListener("touchend", window.scaleNormal, false);
-window.audioElement.addEventListener(
-  "stalled",
-  window.buttonError,
-  false
-);
+window.audioElement.addEventListener("stalled", window.buttonError, false);
 window.audioElement.addEventListener("paused", window.buttonPlay, false);
 window.audioElement.addEventListener("error", window.buttonError, false);
 window.audioElement.addEventListener("abort", window.buttonError, false);
-window.audioElement.addEventListener(
-  "playing",
-  window.buttonPause,
-  false
-);
+window.audioElement.addEventListener("playing", window.buttonPause, false);
 window.button.className = "error";
-
-window.audioElement.muted = true;
-
-setTimeout(() => {
- window.audioElement.play(); 
-  setTimeout(() => {
- window.audioElement.muted = false;
-}, 500);
-}, 300);
-
