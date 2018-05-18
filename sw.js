@@ -6,8 +6,8 @@ var __wpo = {
       "./build/play.svg",
       "./build/pause.svg",
       "./build/refresh.svg",
-      "./build/twitter.svg",
       "./build/instagram.svg",
+      "./build/twitter.svg",
       "./build/bahia.svg",
       "./build/facebook.svg",
       "./bundle.js"
@@ -18,21 +18,21 @@ var __wpo = {
   "externals": [],
   "hashesMap": {
     "3ec4a2ce09d8b8e1a3e367137d7bc64889f5c721": "./",
-    "f952fe6a036f48281fc011417912d6be4f0e4ab4": "./build/birds.svg",
-    "aa721359d10819b9a931c1ff9072fe192c7380b7": "./build/play.svg",
-    "0c387340ff1657641be00b63ae2dea1109f8ddf9": "./build/pause.svg",
-    "0e8292b8c6663108c6461aa43d7026db332cf91f": "./build/refresh.svg",
-    "52b275ad9b7d1e1b0c4f664ee301225743229d40": "./build/twitter.svg",
-    "c5f199a0d21e3661eb7e7bc27f07dd5bfa21fd83": "./build/instagram.svg",
-    "08a3dd689c36cb986b8e710092ad255febe73691": "./build/bahia.svg",
-    "5e68f1c671f223a5708e7b875911aa6e15d73443": "./build/facebook.svg",
-    "02a29c05b3a8c59f66d9fe8e1482aebe2d0d5eef": "./bundle.js"
+    "0656d36f23db16e762a7a4d9f34fb0a0304cc67d": "./build/birds.svg",
+    "5ec4c853d60b5a1a7e30924661e04a22cf971d48": "./build/play.svg",
+    "c8d023ab361421f7335ee22c4692a65243bceefe": "./build/pause.svg",
+    "6b33b96af205b7d5d48244fabe7357d62e4b2baa": "./build/refresh.svg",
+    "96b396a9e4a168f0bae9a933bd1cb99160506d4f": "./build/instagram.svg",
+    "bca8ce87f062282055ff279fd4597b1752f16c65": "./build/twitter.svg",
+    "b8cf55e099e9ab1dc0bfec0ceca6d3434d23f57a": "./build/bahia.svg",
+    "221e1d40fcf1342c7bc0c0e8f430f04b7488f709": "./build/facebook.svg",
+    "6c472598b8e3f88b5a211e05a2b413b0f76e63d0": "./bundle.js"
   },
   "strategy": "all",
   "responseStrategy": "network-first",
-  "version": "2018-5-18 08:42:08",
+  "version": "2018-5-18 09:07:31",
   "name": "webpack-offline",
-  "pluginVersion": "4.9.0",
+  "pluginVersion": "4.9.1",
   "relativePaths": true
 };
 
@@ -858,7 +858,7 @@ function cachesMatch(request, cacheName) {
   return caches.match(request, {
     cacheName: cacheName
   }).then(function (response) {
-    if (isNotRedirectedResponse()) {
+    if (isNotRedirectedResponse(response)) {
       return response;
     }
 
